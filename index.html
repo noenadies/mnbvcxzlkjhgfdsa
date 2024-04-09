@@ -45,9 +45,21 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.idmpanel{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
 </style>
 </head>
 <body>
+    <script>
+        var global={
+            elemntopanel:null
+        }
+    </script>
+
+    <div id="idmpanel"></div>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -63,11 +75,19 @@ body {
 
 <script>
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  //document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById('idmpanel').style.display='block' ;
+  setTimeout(() => {
+    document.getElementById('idmpanel').style.display='none' ;
+  }, 4000);
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  //document.getElementById("mySidenav").style.width = "0";
+}
+
+window.onload=()=>{
+    
 }
 </script>
    
