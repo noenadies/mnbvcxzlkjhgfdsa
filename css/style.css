@@ -237,4 +237,26 @@ canvas{
  justify-content: center;
  align-items: center;
  align-content: center;
+ cursor: pointer;
+}
+
+.Actualizar{
+  position: absolute;
+  bottom: -10%;
+  width: 80px;
+  height: 30px; 
+  background-color: #000000b2;
+ color: #91ceff;
+
+ display: flex;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ justify-content: center;
+ align-items: center;
+ align-content: center;
+
+ cursor: pointer;
+}
+.Actualizar:hover{
+  color: #1277f3;
 }
