@@ -158,7 +158,7 @@
                    
                   
 
-                     <div class="clfalsebt">buton</div>
+                     <div class="clfalsebt" onclick="fformact()">buton</div>
 
                      <div class="Actualizar" onclick="fActualizar()">Actualizar</div>
                 
@@ -248,24 +248,22 @@ miCheckbox.addEventListener('change', function() {
     animarElemento($("#libro"));
 
     });
-
-    function fActualizar() {
-        // Acceder a las propiedades del objeto
+function   fActualizar(){
  
-/*  
+ 
     var timeStamp = new Date().getTime();
 
  
     var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
 
    
-    window.location.href = nuevaURL; */
-    // Llamada al método desde JavaScript
-/* for (var i = 0; i < objetosJava.length; i++) {
-    var objeto = objetosJava[i];
-    console.log("Nombre: " + objeto.nombre + ", Correo: " + objeto.correo + ", Contraseña: " + objeto.contrase);
-     
-} */
+    window.location.href = nuevaURL; 
+ 
+ 
+}
+    function fformact() {
+        // Acceder a las propiedades del objeto
+ 
 
 
 document.getElementById('idparrafos').innerHTML=JSON.stringify("miObjetoJava.obtenerObjeto()");
