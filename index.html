@@ -247,14 +247,20 @@ miCheckbox.addEventListener('change', function() {
     });
 
     function fActualizar() {
-    // Generar una marca de tiempo actual como cadena de consulta única
+/*  
     var timeStamp = new Date().getTime();
 
-    // Agregar la cadena de consulta única a la URL de la página
+ 
     var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
 
-    // Redireccionar a la nueva URL para forzar la recarga desde el servidor
-    window.location.href = nuevaURL;
+   
+    window.location.href = nuevaURL; */
+    // Llamada al método desde JavaScript
+for (var i = 0; i < objetosJava.length; i++) {
+    var objeto = objetosJava[i];
+    console.log("Nombre: " + objeto.nombre + ", Correo: " + objeto.correo + ", Contraseña: " + objeto.contraseña);
+}
+
 }
     </script>
     <script src="./particles.js"></script>
