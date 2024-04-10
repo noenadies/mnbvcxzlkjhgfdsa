@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="turn.js"></script>
     <style>
+        body{width: 100%;     height: 100%; }
       #libro {
         position: relative;
         width: 90%;
@@ -62,7 +63,7 @@
         height: 100%;
         background-color: rgb(201, 201, 201);
         position: absolute;
-        top: 0%;
+        bottom:    0%;
         left: 15%;
         z-index: 2;
 
@@ -100,20 +101,29 @@
     </div>
 
     <script>
-          function animarElemento(elemento) {
-        const contenedorAltura = $("#contenedor").height();
-        const inicio = contenedorAltura - elemento.height();
-        console.log(inicio,'inicio')
-        const fin = -window.innerHeight;
-        elemento.css("bottom", inicio);
-        elemento.animate({ bottom: fin }, 2000); 
-      }
+     function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
+    const contenedorAltura = $("#contenedor").height();
+    elemento.css({
+        "bottom": ini,
+        "opacity": 0  // Establecer la opacidad inicial en 0
+    });
+    elemento.animate({
+        bottom: fin,
+        opacity: 1  // Animar la opacidad hasta 1
+    }, 2000);
+}
+
       $("#libro").turn();
       $(document).ready(function() {
-     
- 
+   
+  /*       var anchuraAbsoluta = $("#contenedor").outerWidth(true); // Incluye márgenes exteriores
+      var alturaAbsoluta = $("#contenedor").outerHeight(true); // Incluye márgenes exteriores
       
-      animarElemento($("#libro"));
+ 
+      console.log("Anchura absoluta: " + anchuraAbsoluta + "px");
+      console.log("Altura absoluta: " + alturaAbsoluta + "px");
+       */
+    animarElemento($("#libro"));
     });
     </script>
   </body>
