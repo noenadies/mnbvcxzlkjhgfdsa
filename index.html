@@ -1,68 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libro con turn.js</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.0.2/turn.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="turn.min.js"></script>
-  <style>
-    #libro {
-      width: 90%;
-      height: 700px;
-      margin: auto;
-    }
-    .pagina {
-      background-color: rgb(29, 75, 102);
-      border: 1px solid black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 24px;
-    }
-    input[type="text"] {
-      width: 80%;
-      padding: 10px;
-      font-size: 18px;
-      border: none;
-      background-color: rgba(255, 255, 255, 0.3);
-      color: white;
-      margin: 20px auto;
-      display: block;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      border: none;
-      background-color: rgba(255, 255, 255, 0.3);
-      color: white;
-      cursor: pointer;
-      margin: 20px auto;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <div id="libro">
-    <div class="pagina">
-      <input type="text" placeholder="Ingrese su texto aquí">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro con turn.js</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.0.2/turn.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="turn.js"></script>
+    <style>
+      #libro {
+        position: relative;
+        width: 90%;
+        height: 100%; 
+      }
+      .pagina {
+        background-color: rgb(29, 75, 102);
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        position: relative;
+        width: 90%;
+        height: 100%; 
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        margin: 20px auto;
+        display: block;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        cursor: pointer;
+        margin: 20px auto;
+        display: block;
+      }
+      .clp1 {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 1;
+      }
+      .clconten{
+        width: 80%;
+        height: 100%;
+        background-color: rgb(201, 201, 201);
+        position: absolute;
+        top: 0%;
+        left: 15%;
+        z-index: 2;
+
+        display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clp1">
+        <div id="contenedor" class="clconten">
+
+            <div id="libro">
+                <div class="pagina">
+                  <input type="text" placeholder="Ingrese su texto aquí" />
+                </div>
+                <div class="pagina">
+                  <button onclick="alert('¡Hola mundo!')">¡Haz clic aquí!</button>
+                </div>
+                <div class="pagina">
+                  <p>
+                    Este es un párrafo de ejemplo con texto de relleno. Puedes agregar
+                    cualquier contenido que desees aquí.
+                  </p>
+                </div>
+                <div class="pagina">Página 4</div>
+                <div class="pagina">Página 5</div>
+              </div>
+        </div>
+   
     </div>
-    <div class="pagina">
-      <button onclick="alert('¡Hola mundo!')">¡Haz clic aquí!</button>
-    </div>
-    <div class="pagina"> 
-      <p>
-        Este es un párrafo de ejemplo con texto de relleno. 
-        Puedes agregar cualquier contenido que desees aquí.
-      </p>
-    </div>
-    <div class="pagina">Página 4</div>
-    <div class="pagina">Página 5</div>
-  </div>
-  <script>
-    $('#libro').turn();
-  </script>
-</body>
+
+    <script>
+          function animarElemento(elemento) {
+        const contenedorAltura = $("#contenedor").height();
+        const inicio = contenedorAltura - elemento.height();
+        console.log(inicio,'inicio')
+        const fin = -window.innerHeight;
+        elemento.css("bottom", inicio);
+        elemento.animate({ bottom: fin }, 2000); 
+      }
+      $("#libro").turn();
+      $(document).ready(function() {
+     
+ 
+      
+      animarElemento($("#libro"));
+    });
+    </script>
+  </body>
 </html>
