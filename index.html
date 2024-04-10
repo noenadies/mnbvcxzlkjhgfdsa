@@ -270,7 +270,7 @@ miCheckbox.addEventListener('change', function() {
 
 document.getElementById('idparrafos').innerHTML=JSON.stringify("miObjetoJava.obtenerObjeto()");
 let res=javaConnector.toLowerCase(document.getElementById('idnamein1').value.toString());
-document.getElementById('idparrafos').innerHTML=JSON.stringify(res);
+document.getElementById('idparrafos').innerHTML=JSON.stringify(JSON.parse(res));
 document.getElementById('idparrafos2').innerHTML=JSON.stringify( getJsConnector() );
 }
 
