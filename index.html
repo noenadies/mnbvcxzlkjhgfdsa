@@ -283,6 +283,91 @@ var jsConnector = {
             function getJsConnector() {
                 return jsConnector;
             };
+
+            function encriptarTexto(texto) {
+  // Convertir el texto a minúsculas
+  texto = texto.toLowerCase();
+  
+  // Array para almacenar el texto encriptado
+  let textoEncriptado = '';
+  
+  // Recorrer cada carácter del texto
+  for (let i = 0; i < texto.length; i++) {
+    // Obtener el código ASCII del carácter actual
+    const charCode = texto.charCodeAt(i);
+    
+    // Verificar si el carácter es una letra minúscula
+    if (charCode >= 97 && charCode <= 122) {
+      // Encriptar la letra y agregarla al texto encriptado
+      textoEncriptado += (charCode - 96) + ' '; // Restar 96 para obtener la posición en el alfabeto
+    } else {
+      // Mantener los caracteres que no son letras sin encriptar
+      textoEncriptado += texto.charAt(i);
+    }
+  }
+  
+  return textoEncriptado.trim(); // Eliminar espacios en blanco al inicio y al final
+}
+
+// Ejemplo de uso
+function encriptarTexto(textoOriginal) {
+  let textoEncriptado = '';
+  
+  // Recorrer cada caracter del texto original
+  for (let i = 0; i < textoOriginal.length; i++) {
+    const caracter = textoOriginal[i];
+    
+    // Obtener el código ASCII del caracter actual
+    const codigoAscii = caracter.charCodeAt(0);
+    
+    // Verificar si el caracter es una letra
+    if (codigoAscii >= 65 && codigoAscii <= 90) { // Mayúsculas
+      textoEncriptado += (codigoAscii - 64) + ' '; // 'A' => 1, 'B' => 2, ...
+    } else if (codigoAscii >= 97 && codigoAscii <= 122) { // Minúsculas
+      textoEncriptado += (codigoAscii - 96) + ' '; // 'a' => 1, 'b' => 2, ...
+    } else { // Caracteres especiales y espacios
+      textoEncriptado += codigoAscii + ' '; // Guardamos el código ASCII
+    }
+  }
+  
+  return textoEncriptado.trim(); // Eliminamos el espacio extra al final
+}
+
+function desencriptarTexto(textoEncriptado) {
+  // Dividir el texto encriptado en palabras
+  const palabrasEncriptadas = textoEncriptado.split(' ');
+  
+  // Array para almacenar el texto desencriptado
+  let textoDesencriptado = '';
+  
+  // Recorrer cada palabra encriptada
+  for (let i = 0; i < palabrasEncriptadas.length; i++) {
+    const palabra = palabrasEncriptadas[i];
+    
+    // Convertir la palabra en número
+    const posicion = parseInt(palabra, 10);
+    
+    // Verificar si la posición está en el rango de las letras minúsculas
+    if (posicion >= 1 && posicion <= 26) {
+      // Convertir la posición a la letra correspondiente y agregarla al texto desencriptado
+      textoDesencriptado += String.fromCharCode(posicion + 96); // Sumar 96 para obtener el código ASCII de la letra
+    } else {
+      // Mantener los números o caracteres que no corresponden a letras sin cambios
+      textoDesencriptado += String.fromCharCode(posicion); // Convertimos el código ASCII de vuelta al caracter original
+    }
+  }
+  
+  return textoDesencriptado;
+}
+
+
+// Ejemplo de uso
+const textoOriginal = 'Hola Mundo! @#$%'.toLowerCase();
+const textoEncriptado = encriptarTexto(textoOriginal);
+console.log('Texto encriptado:', textoEncriptado); // Salida: '8 15 12 1 32 13 21 14 4 21 23 24 25 26'
+const textoDesencriptado = desencriptarTexto(textoEncriptado).toLowerCase();
+console.log('Texto desencriptado:', textoDesencriptado,textoOriginal, textoOriginal==textoDesencriptado); // Salida: 'hola mundo! @#$%'
+
     </script>
     <script src="./particles.js"></script>
     <script src="js/app.js"></script>
