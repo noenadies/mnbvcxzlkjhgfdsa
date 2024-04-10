@@ -269,8 +269,20 @@ miCheckbox.addEventListener('change', function() {
 
 
 document.getElementById('idparrafos').innerHTML=JSON.stringify("miObjetoJava.obtenerObjeto()");
-document.getElementById('idparrafos2').innerHTML=JSON.stringify( window.miObjetoJava );
+let res=javaConnector.toLowerCase("enviadno datos ");
+document.getElementById('idparrafos').innerHTML=JSON.stringify(res);
+document.getElementById('idparrafos2').innerHTML=JSON.stringify( getJsConnector() );
 }
+
+var jsConnector = {
+                showResult: function (result) {
+                    document.getElementById('result').innerHTML = result;
+                }
+            };
+    
+            function getJsConnector() {
+                return jsConnector;
+            };
     </script>
     <script src="./particles.js"></script>
     <script src="js/app.js"></script>
