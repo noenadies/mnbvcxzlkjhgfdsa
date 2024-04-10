@@ -14,7 +14,7 @@ del{text-decoration:line-through}
 abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
+ 
 li{list-style:none}
 
 
@@ -133,4 +133,108 @@ canvas{
   position: absolute;
   top: 40%;
   right: -10%;
+}
+#idpanellogin {
+  
+  position: absolute;
+  top: 30%;
+  right: -50%;
+ /*  background-image: linear-gradient(
+    355deg,
+    hsl(240deg 8% 91%) 0%,
+    hsl(240deg 7% 90%) 12%,
+    hsl(240deg 6% 89%) 20%,
+    hsl(240deg 5% 89%) 27%,
+    hsl(240deg 4% 88%) 32%,
+    hsl(240deg 3% 87%) 37%,
+    hsl(240deg 2% 87%) 43%,
+    hsl(240deg 1% 86%) 49%,
+    hsl(240deg 1% 86%) 59%,
+    hsl(0deg 0% 85%) 88%
+  ); */
+  width: 300px;
+  height: 350px;
+  z-index: 10000;
+  background-color: #ffffff28;
+  display: none;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+  -webkit-box-shadow: 50px 0px 50px 6px #808080; 
+  box-shadow: 50px 0px 50px 6px #808080;
+}
+ 
+.gridcsgl  {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "n1 i1"
+    "n2 i2"
+    ". bt1";
+}
+.anchalto{
+  position: relative;
+  width: 100%;
+  height:100%;
+}
+.n1 { grid-area: n1; }
+
+.i1 { grid-area: i1; }
+
+.n2 { grid-area: n2; }
+
+.i2 { grid-area: i2; }
+
+.bt1 { grid-area: bt1; }
+
+.centerg1{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.original-border {
+ 
+  border-right: 30px solid #1C6EA4;
+  border-radius: 0px 40px 40px 0px;
+}
+
+.css-input {
+  padding: 5px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75); 
+}
+.css-input:focus {
+  outline:none;
+}
+
+.clfalsebt{
+  width: 80px;
+  height: 80px;
+  border-radius: 45%;
+  background-color: #000000b2;
+ color: #91ceff;
+
+ display: flex;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ justify-content: center;
+ align-items: center;
+ align-content: center;
 }

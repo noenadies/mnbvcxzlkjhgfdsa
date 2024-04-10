@@ -38,7 +38,7 @@
         width: 90%;
         height: 100%; 
       }
-      input[type="text"] {
+ /*      input[type="text"] {
         width: 80%;
         padding: 10px;
         font-size: 18px;
@@ -47,8 +47,8 @@
         color: white;
         margin: 20px auto;
         display: block;
-      }
-      button {
+      } */
+/*       button {
         padding: 10px 20px;
         font-size: 18px;
         border: none;
@@ -57,7 +57,7 @@
         cursor: pointer;
         margin: 20px auto;
         display: block;
-      }
+      } */
       .clp1 {
         width: 100%;
         height: 100%;
@@ -123,6 +123,7 @@
   </head>
   <body>
     <div class="clp1">
+        
         <div id="particles-js"></div>
 
 <!-- scripts -->
@@ -130,9 +131,46 @@
 
 <!-- stats.js --> 
         <div id="idblock">
+            <div id="idpanellogin">
+                <form id="loginForm">
+              <!--     <label for="username">Usuario:</label>
+                  <input type="text" id="username" name="username" required>
+                  <label for="password">Contraseña:</label>
+                  <input type="password" id="password" name="password" required> -->
+                  <div class="gridcsgl">
+                    <div class="n1 anchalto centerg1">
+                        <label for="" >name</label>
+                    </div>
+               
+                    <div class="i1 anchalto centerg1">
+                        <input type="text" class="css-input">
+                    </div>
+                    <div class="n2 anchalto centerg1">
+                        <label for="" >name</label>
+                    </div>
+               
+                    <div class="i2 anchalto centerg1">
+                        <input type="text" class="css-input">
+                    </div>
+                   
+                  
+
+                     <div class="clfalsebt">buton</div>
+                
+                </div>
+
+               <!--    <div class="textbox"><input type="text" />
+                    <div class="border"></div>
+                </div>
+                <div class="textbox"><input type="text" />
+                    <div class="border"></div>
+                </div>
+                  -->
+                </form>
+              </div>
             <div class="checkbox-wrap1">
                 <label class="checkbox">
-                    <input type="checkbox"/>
+                    <input id="miCheckbox" type="checkbox"/>
                     <span></span>
                 </label>
             </div>
@@ -188,8 +226,10 @@ miCheckbox.addEventListener('change', function() {
     // Verificar si la casilla de verificación está marcada o desmarcada
     if (this.checked) {
         console.log('La casilla de verificación está marcada');
+        document.getElementById('idpanellogin').style.display='flex';
     } else {
         console.log('La casilla de verificación está desmarcada');
+        document.getElementById('idpanellogin').style.display='none';
     }
 });
    
