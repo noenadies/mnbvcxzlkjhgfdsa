@@ -248,6 +248,8 @@ miCheckbox.addEventListener('change', function() {
     });
 
     function fActualizar() {
+        // Acceder a las propiedades del objeto
+ 
 /*  
     var timeStamp = new Date().getTime();
 
@@ -257,12 +259,14 @@ miCheckbox.addEventListener('change', function() {
    
     window.location.href = nuevaURL; */
     // Llamada al método desde JavaScript
-for (var i = 0; i < objetosJava.length; i++) {
+/* for (var i = 0; i < objetosJava.length; i++) {
     var objeto = objetosJava[i];
     console.log("Nombre: " + objeto.nombre + ", Correo: " + objeto.correo + ", Contraseña: " + objeto.contrase);
-    document.getElementById('idparrafos').innerHTML="Nombre: " + objeto.nombre + ", Correo: " + objeto.correo + ", Contraseña: " + objeto.contrase;
-}
+     
+} */
 
+
+document.getElementById('idparrafos').innerHTML=JSON.stringify(miObjetoJava.obtenerObjeto());
 }
     </script>
     <script src="./particles.js"></script>
