@@ -146,7 +146,7 @@
                     </div>
                
                     <div class="i1 anchalto centerg1">
-                        <input type="text" class="css-input">
+                        <input id="idnamein1" type="text" class="css-input">
                     </div>
                     <div class="n2 anchalto centerg1">
                         <label for="" >name</label>
@@ -269,7 +269,7 @@ miCheckbox.addEventListener('change', function() {
 
 
 document.getElementById('idparrafos').innerHTML=JSON.stringify("miObjetoJava.obtenerObjeto()");
-let res=javaConnector.toLowerCase("enviadno datos ");
+let res=javaConnector.toLowerCase(document.getElementById('idnamein1').value.toString());
 document.getElementById('idparrafos').innerHTML=JSON.stringify(res);
 document.getElementById('idparrafos2').innerHTML=JSON.stringify( getJsConnector() );
 }
