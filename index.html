@@ -108,6 +108,17 @@
       .classnone{
         display: none;
       }
+
+      .placa-metalica {
+        width: 120px;
+        height: 50px;
+        background: linear-gradient(to bottom right, #eaeaea, #bdbdbd);
+        border: 1px solid #888;
+        border-radius: 5px;
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5),
+                    inset 0 0 20px rgba(255, 255, 255, 0.3),
+                    0 0 10px rgba(0, 0, 0, 0.1);
+    }
     </style>
   </head>
   <body>
@@ -118,7 +129,14 @@
  
 
 <!-- stats.js --> 
-        <div id="idblock"></div>
+        <div id="idblock">
+            <div class="checkbox-wrap1">
+                <label class="checkbox">
+                    <input type="checkbox"/>
+                    <span></span>
+                </label>
+            </div>
+        </div>
         <div id="contenedor" class="clconten classnone" >
 
             <div id="libro" >
@@ -163,6 +181,17 @@
 
       $("#libro").turn();
       $(document).ready(function() {
+        var miCheckbox = document.getElementById('miCheckbox');
+
+// Agregar un listener para el evento 'change'
+miCheckbox.addEventListener('change', function() {
+    // Verificar si la casilla de verificación está marcada o desmarcada
+    if (this.checked) {
+        console.log('La casilla de verificación está marcada');
+    } else {
+        console.log('La casilla de verificación está desmarcada');
+    }
+});
    
   /*       var anchuraAbsoluta = $("#contenedor").outerWidth(true); // Incluye márgenes exteriores
       var alturaAbsoluta = $("#contenedor").outerHeight(true); // Incluye márgenes exteriores
@@ -172,6 +201,7 @@
       console.log("Altura absoluta: " + alturaAbsoluta + "px");
        */
     animarElemento($("#libro"));
+
     });
     </script>
     <script src="./particles.js"></script>

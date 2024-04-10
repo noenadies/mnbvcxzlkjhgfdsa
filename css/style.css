@@ -94,3 +94,43 @@ canvas{
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+.checkbox input {
+	display: none;
+}
+.checkbox span {
+	display: inline-block;
+	cursor: pointer;
+	height: 200px; /* Ajuste de la altura */
+	width: 200px; /* Ajuste del ancho */
+	background-color: transparent;
+	border-radius: 8px;
+	border: 2px solid #1277f3;
+	transform: rotate(-90deg);
+	transition: all 0.3s;
+}
+.checkbox span:after {
+	content: "\2713";
+	color: #fff;
+}
+.checkbox input:checked ~ span {
+	background-color: #1298f3;
+	border-radius: 8px;
+	transform: rotate(0deg);
+	opacity: 1;
+	border: 2px solid #1298f3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+.checkbox input:checked ~ span:after {
+	content: "\2713";
+	color: #fff;
+}
+.checkbox-wrap1{
+
+  position: absolute;
+  top: 40%;
+  right: -10%;
+}
