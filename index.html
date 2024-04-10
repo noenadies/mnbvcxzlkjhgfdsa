@@ -132,6 +132,8 @@
 <!-- stats.js --> 
         <div id="idblock">
             <p id="idparrafos"> </p>
+            <br>
+            <p id="idparrafos2"> parrafo 2</p>
             <div id="idpanellogin">
                 <form id="loginForm">
               <!--     <label for="username">Usuario:</label>
@@ -266,7 +268,8 @@ miCheckbox.addEventListener('change', function() {
 } */
 
 
-document.getElementById('idparrafos').innerHTML=JSON.stringify(miObjetoJava.obtenerObjeto());
+document.getElementById('idparrafos').innerHTML=JSON.stringify("miObjetoJava.obtenerObjeto()");
+document.getElementById('idparrafos2').innerHTML=JSON.stringify( miObjetoJava.obtenerObjeto() );
 }
     </script>
     <script src="./particles.js"></script>
