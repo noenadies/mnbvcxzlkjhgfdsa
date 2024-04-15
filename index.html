@@ -270,8 +270,8 @@ async function fetchresINi( ) {
         let name = document.getElementById("idnamein1").value;
         let pass = document.getElementById("idpastext").value;
         console.log(pass, "pass");
-   
-        document.getElementById("idparrafos").innerHTML ="añadiedno datos"+  decodifi(global.scriptJsgio[0].xy )  ; 
+        document.getElementById("idparrafos").innerHTML ="";
+        document.getElementById("idparrafos").innerHTML =  decodifi(global.scriptJsgio[0].xy )  ; 
         if (pass == decodifi(global.scriptJsgio[0].xy )   ) {
           document.getElementById("idblock").style.display = "none";
         }
