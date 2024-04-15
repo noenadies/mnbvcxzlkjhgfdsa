@@ -1,6 +1,19 @@
 [
     {
+      "nombre": "user",
+      "correo": "uncorreo@example.com",
+      "contraseña": "clave123",
       "pg": "910,908,893,907," 
-    } 
+    },
+    {
+      "nombre": "María García",
+      "correo": "maria@example.com",
+      "contraseña": "secreto456"
+    },
+    {
+      "nombre": "Pedro López",
+      "correo": "pedro@example.com",
+      "contraseña": "contraseña789"
+    }
   ]
   
