@@ -9,25 +9,29 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.0.2/turn.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="un.js"></script>
     <script src="turn.js"></script>
 
-
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>particles.js</title>
- 
- 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" media="screen" href="css/style.css">
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
     <style>
-        body{width: 100%;     height: 100%; }
+      body {
+        width: 100%;
+        height: 100%;
+      }
       #libro {
         position: relative;
         width: 90%;
-        height: 100%; 
+        height: 100%;
         background-color: rgb(255, 255, 255);
       }
       .pagina {
-       
         border: 4px solid rgb(139, 139, 139);
         display: flex;
         justify-content: center;
@@ -36,9 +40,9 @@
         font-size: 24px;
         position: relative;
         width: 90%;
-        height: 100%; 
+        height: 100%;
       }
- /*      input[type="text"] {
+      /*      input[type="text"] {
         width: 80%;
         padding: 10px;
         font-size: 18px;
@@ -48,7 +52,7 @@
         margin: 20px auto;
         display: block;
       } */
-/*       button {
+      /*       button {
         padding: 10px 20px;
         font-size: 18px;
         border: none;
@@ -66,38 +70,43 @@
         left: 0%;
         z-index: 1;
       }
-      .clconten{
+      .clconten {
         width: 80%;
         height: 100%;
         background-color: rgb(201, 201, 201);
         position: absolute;
-        bottom:    0%;
+        bottom: 0%;
         left: 15%;
         z-index: 2;
 
         display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
       }
-      #idblock{
+      #idblock {
         position: absolute;
         top: 0%;
         left: 0%;
         width: 50vw;
         height: 100%;
-        background-color: rgba(1, 141, 255, 0.5); 
+        background-color: rgba(1, 141, 255, 0.5);
         background: rgba(255, 255, 255, 0.3); /* Color de fondo translúcido */
-      border-radius: 10px;
-      backdrop-filter: blur(10px); /* Aplicar efecto de desenfoque */
-      -webkit-backdrop-filter: blur(10px); /* Para navegadores webkit (Safari, Chrome) */
-      background: linear-gradient(to bottom, rgba(201, 231, 255, 0.5), rgba(1, 141, 255, 0.5));
-  z-index: 100;
- 
+        border-radius: 10px;
+        backdrop-filter: blur(10px); /* Aplicar efecto de desenfoque */
+        -webkit-backdrop-filter: blur(
+          10px
+        ); /* Para navegadores webkit (Safari, Chrome) */
+        background: linear-gradient(
+          to bottom,
+          rgba(201, 231, 255, 0.5),
+          rgba(1, 141, 255, 0.5)
+        );
+        z-index: 100;
       }
-      .contenedrpaginas{
+      .contenedrpaginas {
         position: absolute;
         top: 0%;
         left: 0%;
@@ -105,7 +114,7 @@
         height: 100%;
         background-color: rgb(226, 124, 0);
       }
-      .classnone{
+      .classnone {
         display: none;
       }
 
@@ -116,252 +125,226 @@
         border: 1px solid #888;
         border-radius: 5px;
         box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5),
-                    inset 0 0 20px rgba(255, 255, 255, 0.3),
-                    0 0 10px rgba(0, 0, 0, 0.1);
-    }
+          inset 0 0 20px rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
+      }
     </style>
   </head>
   <body>
     <div class="clp1">
-        
-        <div id="particles-js"></div>
+      <div id="particles-js"></div>
 
-<!-- scripts -->
- 
+      <!-- scripts -->
 
-<!-- stats.js --> 
-        <div id="idblock">
-            <p id="idparrafos"> </p>
-            <br>
-            <p id="idparrafos2"> parrafo 2</p>
-            <div id="idpanellogin">
-                <form id="loginForm">
-      
-                  <div class="gridcsgl">
-                    <div class="n1 anchalto centerg1">
-                        <label for="" >name</label>
-                    </div>
-               
-                    <div class="i1 anchalto centerg1">
-                        <input id="idnamein1" type="text" class="css-input">
-                    </div>
-                    <div class="n2 anchalto centerg1">
-                        <label for="" >name</label>
-                    </div>
-               
-                    <div class="i2 anchalto centerg1">
-                        <input id="idpastext" type="text" class="css-input">
-                    </div>
-                   
-                  
-
-                     <div class="clfalsebt" onclick="valdiarform()">buton</div>
-
-                     <div class="Actualizar" onclick="fActualizar()">Actualizar</div>
-                
-                </div>
-
-             
-                </form>
+      <!-- stats.js -->
+      <div id="idblock">
+        <p id="idparrafos"></p>
+        <br />
+        <p id="idparrafos2">parrafo 2</p>
+        <div id="idpanellogin">
+          <form id="loginForm">
+            <div class="gridcsgl">
+              <div class="n1 anchalto centerg1">
+                <label for="">name</label>
               </div>
-            <div class="checkbox-wrap1">
-                <label class="checkbox">
-                    <input id="miCheckbox" type="checkbox"/>
-                    <span></span>
-                </label>
+
+              <div class="i1 anchalto centerg1">
+                <input id="idnamein1" type="text" class="css-input" />
+              </div>
+              <div class="n2 anchalto centerg1">
+                <label for="">name</label>
+              </div>
+
+              <div class="i2 anchalto centerg1">
+                <input id="idpastext" type="text" class="css-input" />
+              </div>
+
+              <div class="clfalsebt" onclick="valdiarform()">buton</div>
+
+              <div class="Actualizar" onclick="fActualizar()">Actualizar</div>
             </div>
+          </form>
         </div>
-        <div id="contenedor" class="clconten classnone" >
-
-            <div id="libro" >
- 
-                <div class="contenedrpaginas classnone" id="id2">
-
-                    <div class="pagina">
-                        <input type="text" placeholder="Ingrese su texto aquí" />
-                      </div>
-                      <div class="pagina">
-                        <button onclick="alert('¡Hola mundo!')">¡Haz clic aquí!</button>
-                      </div>
-                      <div class="pagina">
-                        <p>
-                          Este es un párrafo de ejemplo con texto de relleno. Puedes agregar
-                          cualquier contenido que desees aquí.
-                        </p>
-                      </div>
-                      <div class="pagina">Página 4</div>
-                      <div class="pagina">Página 5</div>
-                </div>
-                
-              </div>
+        <div class="checkbox-wrap1">
+          <label class="checkbox">
+            <input id="miCheckbox" type="checkbox" />
+            <span></span>
+          </label>
         </div>
-   
+      </div>
+      <div id="contenedor" class="clconten classnone">
+        <div id="libro">
+          <div class="contenedrpaginas classnone" id="id2">
+            <div class="pagina">
+              <input type="text" placeholder="Ingrese su texto aquí" />
+            </div>
+            <div class="pagina">
+              <button onclick="alert('¡Hola mundo!')">¡Haz clic aquí!</button>
+            </div>
+            <div class="pagina">
+              <p>
+                Este es un párrafo de ejemplo con texto de relleno. Puedes
+                agregar cualquier contenido que desees aquí.
+              </p>
+            </div>
+            <div class="pagina">Página 4</div>
+            <div class="pagina">Página 5</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-     function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
-    const contenedorAltura = $("#contenedor").height();
-    elemento.css({
-        "bottom": ini,
-        "opacity": 0  // Establecer la opacidad inicial en 0
-    });
-    elemento.animate({
-        bottom: fin,
-        opacity: 1  // Animar la opacidad hasta 1
-    }, 2000);
-}
+      var global = {
+        java: null,
+      };
+      function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
+        const contenedorAltura = $("#contenedor").height();
+        elemento.css({
+          bottom: ini,
+          opacity: 0, // Establecer la opacidad inicial en 0
+        });
+        elemento.animate(
+          {
+            bottom: fin,
+            opacity: 1, // Animar la opacidad hasta 1
+          },
+          2000
+        );
+      }
 
       $("#libro").turn();
-      $(document).ready(function() {
-        var miCheckbox = document.getElementById('miCheckbox');
+      $(document).ready(function () {
+        var miCheckbox = document.getElementById("miCheckbox");
 
+        miCheckbox.addEventListener("change", function () {
+          if (this.checked) {
+            console.log("La casilla de verificación está marcada");
+            document.getElementById("idpanellogin").style.display = "flex";
+          } else {
+            console.log("La casilla de verificación está desmarcada");
+            document.getElementById("idpanellogin").style.display = "none";
+          }
+        });
 
-miCheckbox.addEventListener('change', function() {
+        animarElemento($("#libro"));
+      });
+      function fActualizar() {
+        var timeStamp = new Date().getTime();
 
-    if (this.checked) {
-        console.log('La casilla de verificación está marcada');
-        document.getElementById('idpanellogin').style.display='flex';
-    } else {
-        console.log('La casilla de verificación está desmarcada');
-        document.getElementById('idpanellogin').style.display='none';
-    }
-});
+        var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
+
+        window.location.href = nuevaURL;
+      }
+      function fformact() {
+        document.getElementById("idparrafos").innerHTML = JSON.stringify(
+          "miObjetoJava.obtenerObjeto()"
+        );
+        let res = javaConnector.toLowerCase(
+          document.getElementById("idnamein1").value.toString()
+        );
+        global.java =  JSON.parse(res);
+        document.getElementById("idparrafos").innerHTML = JSON.stringify(
+          JSON.parse(res)
+        );
+        document.getElementById("idparrafos2").innerHTML = JSON.stringify(
+          getJsConnector()
+        );
+      }
+
+      function valdiarform() {
+        let name = document.getElementById("idnamein1").value;
+        let pass = document.getElementById("idpastext").value;
+        console.log(pass, "pass");
    
- 
-    animarElemento($("#libro"));
+        document.getElementById("idparrafos").innerHTML ="añadiedno datos"+    global.java; 
+        if (pass ==global.java[0].pg  ) {
+          document.getElementById("idblock").style.display = "none";
+        }
+      }
 
-    });
-function   fActualizar(){
- 
- 
-    var timeStamp = new Date().getTime();
+      var jsConnector = {
+        showResult: function (result) {
+          document.getElementById("idparrafos2").innerHTML = result;
+        },
+      };
 
- 
-    var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
+      function getJsConnector() {
+        return jsConnector;
+      }
 
-   
-    window.location.href = nuevaURL; 
- 
- 
-}
-    function fformact() {
-     
- 
+      function encriptarTexto(texto) {
+        texto = texto.toLowerCase();
 
+        let textoEncriptado = "";
 
-document.getElementById('idparrafos').innerHTML=JSON.stringify("miObjetoJava.obtenerObjeto()");
-let res=javaConnector.toLowerCase(document.getElementById('idnamein1').value.toString());
-document.getElementById('idparrafos').innerHTML=JSON.stringify(JSON.parse(res));
-document.getElementById('idparrafos2').innerHTML=JSON.stringify( getJsConnector() );
-}
+        for (let i = 0; i < texto.length; i++) {
+          const charCode = texto.charCodeAt(i);
 
-function valdiarform() {
-     
-let name= document.getElementById('idnamein1').value;
-let pass= document.getElementById('idpastext').value;
-console.log(pass,'pass')
-if(pass=='pass'){
-document.getElementById('idblock').style.display='none';
-}
+          if (charCode >= 97 && charCode <= 122) {
+            textoEncriptado += charCode - 96 + " ";
+          } else {
+            textoEncriptado += texto.charAt(i);
+          }
+        }
 
+        return textoEncriptado.trim();
+      }
 
- 
-     }
-     
+      function encriptarTexto(textoOriginal) {
+        let textoEncriptado = "";
 
-var jsConnector = {
-                showResult: function (result) {
-                    document.getElementById('idparrafos2').innerHTML = result;
-                }
-            };
-    
-            function getJsConnector() {
-                return jsConnector;
-            };
+        for (let i = 0; i < textoOriginal.length; i++) {
+          const caracter = textoOriginal[i];
 
-            function encriptarTexto(texto) {
- 
-  texto = texto.toLowerCase();
-  
-   
-  let textoEncriptado = '';
-  
- 
-  for (let i = 0; i < texto.length; i++) {
- 
-    const charCode = texto.charCodeAt(i);
-    
- 
-    if (charCode >= 97 && charCode <= 122) {
- 
-      textoEncriptado += (charCode - 96) + ' '; 
-    } else {
-      
-      textoEncriptado += texto.charAt(i);
-    }
-  }
-  
-  return textoEncriptado.trim(); 
-}
+          const codigoAscii = caracter.charCodeAt(0);
 
- 
-function encriptarTexto(textoOriginal) {
-  let textoEncriptado = '';
-  
- 
-  for (let i = 0; i < textoOriginal.length; i++) {
-    const caracter = textoOriginal[i];
-    
- 
-    const codigoAscii = caracter.charCodeAt(0);
-    
- 
-    if (codigoAscii >= 65 && codigoAscii <= 90) {  
-      textoEncriptado += (codigoAscii - 64) + ' ';  
-    } else if (codigoAscii >= 97 && codigoAscii <= 122) {  
-      textoEncriptado += (codigoAscii - 96) + ' ';  
-    } else { 
-      textoEncriptado += codigoAscii + ' '; 
-    }
-  }
-  
-  return textoEncriptado.trim();  
-}
+          if (codigoAscii >= 65 && codigoAscii <= 90) {
+            textoEncriptado += codigoAscii - 64 + " ";
+          } else if (codigoAscii >= 97 && codigoAscii <= 122) {
+            textoEncriptado += codigoAscii - 96 + " ";
+          } else {
+            textoEncriptado += codigoAscii + " ";
+          }
+        }
 
-function desencriptarTexto(textoEncriptado) {
- 
-  const palabrasEncriptadas = textoEncriptado.split(' ');
-  
-   
-  let textoDesencriptado = '';
-  
- 
-  for (let i = 0; i < palabrasEncriptadas.length; i++) {
-    const palabra = palabrasEncriptadas[i];
-    
-    const posicion = parseInt(palabra, 10);
-    
-    
-    if (posicion >= 1 && posicion <= 26) {
-      
-      textoDesencriptado += String.fromCharCode(posicion + 96);  
-    } else {
-       
-      textoDesencriptado += String.fromCharCode(posicion);  
-    }
-  }
-  
-  return textoDesencriptado;
-}
+        return textoEncriptado.trim();
+      }
 
+      function desencriptarTexto(textoEncriptado) {
+        const palabrasEncriptadas = textoEncriptado.split(" ");
 
- 
-const textoOriginal = 'Hola Mundo! @#$%'.toLowerCase();
-const textoEncriptado = encriptarTexto(textoOriginal);
-console.log('Texto encriptado:', textoEncriptado);  
-const textoDesencriptado = desencriptarTexto(textoEncriptado).toLowerCase();
-console.log('Texto desencriptado:', textoDesencriptado,textoOriginal, textoOriginal==textoDesencriptado);  
+        let textoDesencriptado = "";
 
+        for (let i = 0; i < palabrasEncriptadas.length; i++) {
+          const palabra = palabrasEncriptadas[i];
+
+          const posicion = parseInt(palabra, 10);
+
+          if (posicion >= 1 && posicion <= 26) {
+            textoDesencriptado += String.fromCharCode(posicion + 96);
+          } else {
+            textoDesencriptado += String.fromCharCode(posicion);
+          }
+        }
+
+        return textoDesencriptado;
+      }
+
+      const textoOriginal = "Hola Mundo! @#$%".toLowerCase();
+      const textoEncriptado = encriptarTexto(textoOriginal);
+      console.log("Texto encriptado:", textoEncriptado);
+      const textoDesencriptado =
+        desencriptarTexto(textoEncriptado).toLowerCase();
+      console.log(
+        "Texto desencriptado:",
+        textoDesencriptado,
+        textoOriginal,
+        textoOriginal == textoDesencriptado
+      );
+
+      window.onload = () => {
+        fformact();
+      };
     </script>
     <script src="./particles.js"></script>
     <script src="js/app.js"></script>
