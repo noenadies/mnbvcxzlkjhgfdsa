@@ -196,6 +196,7 @@
     <script>
       var global = {
         java: null,
+        scriptJsgio:null
       };
       function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
         const contenedorAltura = $("#contenedor").height();
@@ -236,7 +237,8 @@
         window.location.href = nuevaURL;
       }
       function fformact() {
-        document.getElementById("idparrafos").innerHTML = JSON.stringify(
+        try {
+          document.getElementById("idparrafos").innerHTML = JSON.stringify(
           "miObjetoJava.obtenerObjeto()"
         );
         let res = javaConnector.toLowerCase(
@@ -249,7 +251,19 @@
         document.getElementById("idparrafos2").innerHTML = JSON.stringify(
           getJsConnector()
         );
+        } catch (error) {
+          
+        }
+     
       }
+
+      
+async function fetchresINi( ) {
+    let a = await fillForm('data.json');
+    console.log(decodifi(a));
+
+
+}
 
       function valdiarform() {
         let name = document.getElementById("idnamein1").value;
@@ -342,8 +356,11 @@
         textoOriginal == textoDesencriptado
       );
 
-      window.onload = () => {
+      window.onload =async () => {
         fformact();
+     global.scriptJsgio = await fillForm('data.json');
+       console.log(    global.scriptJsgio [0].xy,'a');
+   // console.log(decodifi(a));
       };
     </script>
     <script src="./particles.js"></script>
