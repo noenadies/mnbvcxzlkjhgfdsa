@@ -1,18 +1,6 @@
 [
     {
-      "nombre": "Juan Pérez",
-      "correo": "juan@example.com",
-      "contraseña": "clave123"
-    },
-    {
-      "nombre": "María García",
-      "correo": "maria@example.com",
-      "contraseña": "secreto456"
-    },
-    {
-      "nombre": "Pedro López",
-      "correo": "pedro@example.com",
-      "contraseña": "contraseña789"
-    }
+      "pg": "910,908,893,907," 
+    } 
   ]
   
