@@ -109,7 +109,7 @@ var lt = "";
 var stdecodi = "";
 
 function decodifi(st) {
-
+    lt='';
     arraycodigo = [];
 
     stdecodi = st;
