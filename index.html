@@ -230,11 +230,12 @@
         animarElemento($("#libro"));
       });
       function fActualizar() {
-        var timeStamp = new Date().getTime();
+       /*  var timeStamp = new Date().getTime();
 
         var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
 
-        window.location.href = nuevaURL;
+        window.location.href = nuevaURL; */
+        location.reload(true);
       }
       function fformact() {
         try {
