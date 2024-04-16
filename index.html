@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Libro con Turn.js</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
     <script src="./turn.min.js"></script>
     <script src="un.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 
     <style>
       #flipbook {
@@ -48,7 +48,7 @@
         <div class="cluifalse">
           <div
             class="cicleicon"
-            id="idActualizarBt"
+            id="idpanel1"
             tabindex="0"
             onclick="fonclcikfun(this)"
           >
@@ -125,20 +125,19 @@
           <div class="hard"></div>
           <div class="hard"></div>
         </div>
-     <!--    <iframe class="clpanelesopen classnone" id="idpanel1p" src="L1.pdf" width="90%" height="90%" frameborder="0"></iframe> -->
-<div class="clpanelesopen classnone" id="idpanel1p">
- 
-  <div id="idcontropdflector">
-    <label for="fileInput">Seleccionar archivo PDF</label>
-    <input class="" type="file" id="fileInput">
-    <input type="text" id="urlInput" placeholder="">
-    <button id="loadBtn">Cargar PDF</button>
-    <button id="prevPageBtn">Anterior</button>
-    <button id="nextPageBtn">Siguiente</button>
+       <div class="clpanelesopen classnone" id="idpanel1p">
 
-  </div>
-  <canvas id="pdfCanvas"></canvas>
-</div>
+        <div id="idcontropdflector">
+          <label for="fileInput">Seleccionar archivo PDF</label>
+          <input class="" type="file" id="fileInput">
+          <input type="text" id="urlInput" placeholder="">
+          <button id="loadBtn">Cargar PDF</button>
+          <button id="prevPageBtn">Anterior</button>
+          <button id="nextPageBtn">Siguiente</button>
+      
+        </div>
+        <canvas id="pdfCanvas"></canvas> 
+       </div>
       </div>
     </div>
 
@@ -414,7 +413,6 @@
       });
     
     }
-       
     </script>
 
     <script type="text/javascript">
@@ -455,4 +453,3 @@
     <script src="js/app.js"></script>
   </body>
 </html>
-<!-- https://dzone.com/articles/top-20-git-commands-with-examples -->

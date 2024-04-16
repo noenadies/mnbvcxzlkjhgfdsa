@@ -361,7 +361,7 @@ canvas{
   left: 15%;
   z-index: 2;
  
-overflow-y: scroll;
+  overflow-y: scroll;  
 
 }
 .centrarcontenido{
@@ -600,7 +600,7 @@ height: 400px;
 }
 
 #pdfCanvas{
-  position: absolute;
+  position: relative;
   top: 200px;
 
 }
