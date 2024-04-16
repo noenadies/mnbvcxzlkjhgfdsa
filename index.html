@@ -127,11 +127,16 @@
         </div>
      <!--    <iframe class="clpanelesopen classnone" id="idpanel1p" src="L1.pdf" width="90%" height="90%" frameborder="0"></iframe> -->
 <div class="clpanelesopen classnone" id="idpanel1p">
-  <input type="file" id="fileInput">
-  <input type="text" id="urlInput" placeholder="Ingrese la URL del PDF">
-  <button id="loadBtn">Cargar PDF</button>
-  <button id="prevPageBtn">Anterior</button>
-  <button id="nextPageBtn">Siguiente</button>
+ 
+  <div id="idcontropdflector">
+    <label for="fileInput">Seleccionar archivo PDF</label>
+    <input class="" type="file" id="fileInput">
+    <input type="text" id="urlInput" placeholder="">
+    <button id="loadBtn">Cargar PDF</button>
+    <button id="prevPageBtn">Anterior</button>
+    <button id="nextPageBtn">Siguiente</button>
+
+  </div>
   <canvas id="pdfCanvas"></canvas>
 </div>
       </div>
