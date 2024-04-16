@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./turn.min.js"></script>
     <script src="un.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 
     <style>
       #flipbook {
@@ -125,6 +127,7 @@
         </div>
      <!--    <iframe class="clpanelesopen classnone" id="idpanel1p" src="L1.pdf" width="90%" height="90%" frameborder="0"></iframe> -->
 <div class="clpanelesopen classnone" id="idpanel1p">
+  <input type="file" id="fileInput">
   <input type="text" id="urlInput" placeholder="Ingrese la URL del PDF">
   <button id="loadBtn">Cargar PDF</button>
   <button id="prevPageBtn">Anterior</button>
@@ -392,6 +395,18 @@
           });
         });
       }
+
+      $('#fileInput').on('change', function(e) {
+        var file = e.target.files[0];
+        var fileReader = new FileReader();
+        
+        fileReader.onload = function() {
+          var typedarray = new Uint8Array(this.result);
+          displayPdf(typedarray);
+        };
+        
+        fileReader.readAsArrayBuffer(file);
+      });
     
     }
        
