@@ -487,20 +487,49 @@ canvas{
   position: absolute;
   top: 30%;
   left: 40px;
-  width: 70px;
-   background-color:#afafaf ;
+  width: 60px;
+   background-color:#afafaf33 ;
 height: 400px;
  
   z-index: 1000;
  }
  
- #idmenulateralbase:hover{
-  position: absolute;
-  top: 30%;
-  left: 40px;
-  width: 70px;
-   background-color:#5aafff ;
-height: 400px;
  
-  z-index: 1000;
+
+ .cluifalse{
+
+  color: #ffffff00;
+  font-size: 66px; 
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  width: 60px;
+  height: 60px;
+ }
+
+ .cicleicon{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+  background-color: #ffffff;
+  font-size: 33px;
+  color: #4d4d4d;
+  width:44px;
+  height: 44px;
+  border: 1px solid #919191;
+ 
+ cursor: pointer;
+ transition: border-radius 0.3s ease; /* Transición suave */
+
+
+ }
+ .cicleicon:hover{
+  border-radius: 40px 40px 40px 40px;
  }
