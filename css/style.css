@@ -600,7 +600,16 @@ height: 400px;
 }
 
 #pdfCanvas{
+ 
+
+}
+.clpdfCanvas2{
   position: relative;
   top: 200px;
+
+}
+.clpdfCanvas3{
+  position: relative;
+  top: 400px;
 
 }

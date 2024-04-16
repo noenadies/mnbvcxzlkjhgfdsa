@@ -136,7 +136,7 @@
           <button id="nextPageBtn">Siguiente</button>
       
         </div>
-        <canvas id="pdfCanvas"></canvas> 
+        <canvas id="pdfCanvas" class="clpdfCanvas2"></canvas> 
        </div>
       </div>
     </div>
@@ -430,7 +430,18 @@
         if (thiss.id == "idpanel0") {
           mostrarElementos(document.getElementById("flipbook"));
         }
-        if (thiss.id == "idpanel1") {
+        if (thiss.id == "idpanel1") { 
+        let altura= window.innerHeight;
+        if(altura<1200){
+          clpdfCanvas2
+          if (document.getElementById("idpanel1p").classList.contains("clpdfCanvas2")) {
+            document.getElementById("idpanel1p").classList.remove("clpdfCanvas2");
+        }
+        if (!document.getElementById("idpanel1p").classList.contains("clpdfCanvas3")) {
+          document.getElementById("idpanel1p").classList.add("clpdfCanvas3");
+        }
+          
+        }
           mostrarElementos(document.getElementById("idpanel1p"));
         
         }
