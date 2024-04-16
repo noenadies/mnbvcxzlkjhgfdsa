@@ -523,13 +523,13 @@ height: 400px;
   color: #4d4d4d;
   width:44px;
   height: 44px;
-  border: 1px solid #919191;
- 
  cursor: pointer;
- transition: border-radius 0.3s ease; /* Transición suave */
-
+ transition: border-radius 0.7s ease; /* Transición suave */
+ -webkit-box-shadow: 5px 5px 50px 9px #999999; 
+ box-shadow: 5px 5px 50px 9px #999999;
 
  }
  .cicleicon:hover{
   border-radius: 40px 40px 40px 40px;
+  
  }

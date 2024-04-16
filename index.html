@@ -28,8 +28,8 @@
 <body>
     <div class="clp1">
         <div id="particles-js"></div>
-        <div id="idmenulateralbase">
-          <div class="cluifalse"><div class="cicleicon">ok</div></div>
+        <div id="idmenulateralbase" class="classnone">
+          <div class="cluifalse"><div class="cicleicon">&nabla;</div></div>
           
 
         </div>
@@ -199,6 +199,7 @@
             if (pass == decodifi(global.scriptJsgio[0].xy)) {
                 document.getElementById("idblock").style.display = "none";
                 document.getElementById("contenedor").style.display = "flex";
+                mostrarElementos(document.getElementById('idmenulateralbase'));
                 cargalibro()
                 // animarElemento($("#libro"));
 
