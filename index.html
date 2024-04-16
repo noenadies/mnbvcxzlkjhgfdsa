@@ -1,370 +1,310 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Libro con turn.js</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.0.2/turn.min.css"
-    />
+    <title>Libro con Turn.js</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./turn.min.js"></script>
     <script src="un.js"></script>
-    <script src="turn.js"></script>
 
-    <meta charset="utf-8" />
-    <title>particles.js</title>
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <link rel="stylesheet" media="screen" href="css/style.css" />
     <style>
-      body {
-        width: 100%;
-        height: 100%;
-      }
-      #libro {
-        position: relative;
-        width: 90%;
-        height: 100%;
-        background-color: rgb(255, 255, 255);
-      }
-      .pagina {
-        border: 4px solid rgb(139, 139, 139);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 24px;
-        position: relative;
-        width: 90%;
-        height: 100%;
-      }
-      /*      input[type="text"] {
-        width: 80%;
-        padding: 10px;
-        font-size: 18px;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.3);
-        color: white;
-        margin: 20px auto;
-        display: block;
-      } */
-      /*       button {
-        padding: 10px 20px;
-        font-size: 18px;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.3);
-        color: white;
-        cursor: pointer;
-        margin: 20px auto;
-        display: block;
-      } */
-      .clp1 {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        z-index: 1;
-      }
-      .clconten {
-        width: 80%;
-        height: 100%;
-        background-color: rgb(201, 201, 201);
-        position: absolute;
-        bottom: 0%;
-        left: 15%;
-        z-index: 2;
+     
 
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-      }
-      #idblock {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 50vw;
-        height: 100%;
-        background-color: rgba(1, 141, 255, 0.5);
-        background: rgba(255, 255, 255, 0.3); /* Color de fondo translúcido */
-        border-radius: 10px;
-        backdrop-filter: blur(10px); /* Aplicar efecto de desenfoque */
-        -webkit-backdrop-filter: blur(
-          10px
-        ); /* Para navegadores webkit (Safari, Chrome) */
-        background: linear-gradient(
-          to bottom,
-          rgba(201, 231, 255, 0.5),
-          rgba(1, 141, 255, 0.5)
-        );
-        z-index: 100;
-      }
-      .contenedrpaginas {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(226, 124, 0);
-      }
-      .classnone {
-        display: none;
-      }
+        #flipbook {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
 
-      .placa-metalica {
-        width: 120px;
-        height: 50px;
-        background: linear-gradient(to bottom right, #eaeaea, #bdbdbd);
-        border: 1px solid #888;
-        border-radius: 5px;
-        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5),
-          inset 0 0 20px rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
-      }
+     
+
+     
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="clp1">
-      <div id="particles-js"></div>
+        <div id="particles-js"></div>
 
-      <!-- scripts -->
+        <div id="idblock" class="">
+            <p id="idparrafos"></p>
+            <br />
+            <p id="idparrafos2">parrafo 2</p>
+            <div id="idpanellogin">
+                <form id="loginForm">
+                    <div class="gridcsgl">
+                        <div class="n1 anchalto centerg1">
+                            <label for="">name</label>
+                        </div>
 
-      <!-- stats.js -->
-      <div id="idblock">
-        <p id="idparrafos"></p>
-        <br />
-        <p id="idparrafos2">parrafo 2</p>
-        <div id="idpanellogin">
-          <form id="loginForm">
-            <div class="gridcsgl">
-              <div class="n1 anchalto centerg1">
-                <label for="">name</label>
-              </div>
+                        <div class="i1 anchalto centerg1">
+                            <input id="idnamein1" type="text" class="css-input" />
+                        </div>
+                        <div class="n2 anchalto centerg1">
+                            <label for="">name</label>
+                        </div>
 
-              <div class="i1 anchalto centerg1">
-                <input id="idnamein1" type="text" class="css-input" />
-              </div>
-              <div class="n2 anchalto centerg1">
-                <label for="">name</label>
-              </div>
+                        <div class="i2 anchalto centerg1">
+                            <input id="idpastext" type="text" class="css-input" />
+                        </div>
 
-              <div class="i2 anchalto centerg1">
-                <input id="idpastext" type="text" class="css-input" />
-              </div>
+                        <div class="clfalsebt" onclick="valdiarform()">buton</div>
 
-              <div class="clfalsebt" onclick="valdiarform()">buton</div>
-
-              <div class="Actualizar" onclick="fActualizar()">Actualizar</div>
+                        <div class="Actualizar" onclick="fActualizar()">Actualizar</div>
+                    </div>
+                </form>
             </div>
-          </form>
+            <div class="checkbox-wrap1">
+                <label class="checkbox">
+                    <input id="miCheckbox" type="checkbox" />
+                    <span></span>
+                </label>
+            </div>
         </div>
-        <div class="checkbox-wrap1">
-          <label class="checkbox">
-            <input id="miCheckbox" type="checkbox" />
-            <span></span>
-          </label>
+
+        <div id="contenedor" class="contenedor1 classnone centrarcontenido">
+            <div id="flipbook">
+                <div class="hard">Turn.js</div>
+                <div class="hard"></div>
+                <div class="cl1 centrarColumna">
+
+                    <div class="claltoauto">
+                        <div class="clboxt">git config</div>
+                        <div class="clboxp">
+                            <p>      Usage: git config –global user.name “[name]”</p>
+                            <p>       Usage: git config –global user.email “[email address]”</p>
+                   
+
+                            This command sets the author name and email address respectively to be used with your
+                            commits.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- fin de hoja -->
+
+
+                <div class="cl1">Page 2</div>
+                <div class="cl1">Page 3</div>
+                <div class="cl1">Page 4</div>
+                <div class="hard"></div>
+                <div class="hard"></div>
+            </div>
         </div>
-      </div>
-      <div id="contenedor" class="clconten classnone">
-        <div id="libro">
-          <div class="contenedrpaginas classnone" id="id2">
-            <div class="pagina">
-              <input type="text" placeholder="Ingrese su texto aquí" />
-            </div>
-            <div class="pagina">
-              <button onclick="alert('¡Hola mundo!')">¡Haz clic aquí!</button>
-            </div>
-            <div class="pagina">
-              <p>
-                Este es un párrafo de ejemplo con texto de relleno. Puedes
-                agregar cualquier contenido que desees aquí.
-              </p>
-            </div>
-            <div class="pagina">Página 4</div>
-            <div class="pagina">Página 5</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script>
-      var global = {
-        java: null,
-        scriptJsgio:null
-      };
-      function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
-        const contenedorAltura = $("#contenedor").height();
-        elemento.css({
-          bottom: ini,
-          opacity: 0, // Establecer la opacidad inicial en 0
-        });
-        elemento.animate(
-          {
-            bottom: fin,
-            opacity: 1, // Animar la opacidad hasta 1
-          },
-          2000
-        );
-      }
-
-      $("#libro").turn();
-      $(document).ready(function () {
-        var miCheckbox = document.getElementById("miCheckbox");
-
-        miCheckbox.addEventListener("change", function () {
-          if (this.checked) {
-            console.log("La casilla de verificación está marcada");
-            document.getElementById("idpanellogin").style.display = "flex";
-          } else {
-            console.log("La casilla de verificación está desmarcada");
-            document.getElementById("idpanellogin").style.display = "none";
-          }
-        });
-
-        animarElemento($("#libro"));
-      });
-      function fActualizar() {
-       /*  var timeStamp = new Date().getTime();
-
-        var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
-
-        window.location.href = nuevaURL; */
-        location.reload(true);
-      }
-      function fformact() {
-        try {
-          document.getElementById("idparrafos").innerHTML = JSON.stringify(
-          "miObjetoJava.obtenerObjeto()"
-        );
-        let res = javaConnector.toLowerCase(
-          document.getElementById("idnamein1").value.toString()
-        );
-        global.java = res;
-        document.getElementById("idparrafos").innerHTML =res;/*  JSON.stringify(
-          JSON.parse(res)
-        ); */
-        document.getElementById("idparrafos2").innerHTML = JSON.stringify(
-          getJsConnector()
-        );
-        } catch (error) {
-          
+        var global = {
+            java: null,
+            scriptJsgio: null,
+        };
+        function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
+            const contenedorAltura = $("#contenedor").height();
+            elemento.css({
+                bottom: ini,
+                opacity: 0, // Establecer la opacidad inicial en 0
+            });
+            elemento.animate(
+                {
+                    bottom: fin,
+                    opacity: 1, // Animar la opacidad hasta 1
+                },
+                2000
+            );
         }
-     
-      }
 
+        $(document).ready(function () {
+            fetchresINi();
+            var miCheckbox = document.getElementById("miCheckbox");
+
+            miCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    console.log("La casilla de verificación está marcada");
+                    document.getElementById("idpanellogin").style.display = "flex";
+
+                } else {
+                    console.log("La casilla de verificación está desmarcada");
+                    document.getElementById("idpanellogin").style.display = "none";
+                    //ocultarElementos(document.getElementById("idpanellogin"));
+
+                }
+            });
+
+
+        });
+        function fActualizar() {
+            /*  var timeStamp = new Date().getTime();
       
-async function fetchresINi( ) {
-    let a = await fillForm('data.json');
-    console.log(decodifi(a));
-
-
-}
-
-      function valdiarform() {
-        let name = document.getElementById("idnamein1").value;
-        let pass = document.getElementById("idpastext").value;
-        console.log(pass, "pass");
-        document.getElementById("idparrafos").innerHTML ="";
-        document.getElementById("idparrafos").innerHTML =  decodifi(global.scriptJsgio[0].xy )  ; 
-        if (pass == decodifi(global.scriptJsgio[0].xy )   ) {
-          document.getElementById("idblock").style.display = "none";
-        }
-      }
-
-      var jsConnector = {
-        showResult: function (result) {
-          document.getElementById("idparrafos2").innerHTML = result;
-        },
-      };
-
-      function getJsConnector() {
-        return jsConnector;
-      }
-
-      function encriptarTexto(texto) {
-        texto = texto.toLowerCase();
-
-        let textoEncriptado = "";
-
-        for (let i = 0; i < texto.length; i++) {
-          const charCode = texto.charCodeAt(i);
-
-          if (charCode >= 97 && charCode <= 122) {
-            textoEncriptado += charCode - 96 + " ";
-          } else {
-            textoEncriptado += texto.charAt(i);
-          }
+              var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
+      
+              window.location.href = nuevaURL; */
+            location.reload(true);
         }
 
-        return textoEncriptado.trim();
-      }
+        function ocultarElementos(elem) {
+            if (!elem.classList.contains("classnone")) {
+                elem.classList.add("classnone");
+            }
 
-      function encriptarTexto(textoOriginal) {
-        let textoEncriptado = "";
+        }
+        function mostrarElementos(elem) {
+            if (elem.classList.contains("classnone")) {
+                elem.classList.remove("classnone");
+            }
 
-        for (let i = 0; i < textoOriginal.length; i++) {
-          const caracter = textoOriginal[i];
-
-          const codigoAscii = caracter.charCodeAt(0);
-
-          if (codigoAscii >= 65 && codigoAscii <= 90) {
-            textoEncriptado += codigoAscii - 64 + " ";
-          } else if (codigoAscii >= 97 && codigoAscii <= 122) {
-            textoEncriptado += codigoAscii - 96 + " ";
-          } else {
-            textoEncriptado += codigoAscii + " ";
-          }
+        }
+        function fformact() {
+            try {
+                document.getElementById("idparrafos").innerHTML = JSON.stringify(
+                    "miObjetoJava.obtenerObjeto()"
+                );
+                let res = javaConnector.toLowerCase(
+                    document.getElementById("idnamein1").value.toString()
+                );
+                global.java = res;
+                document.getElementById("idparrafos").innerHTML =
+                    res; /*  JSON.stringify(
+            JSON.parse(res)
+          ); */
+                document.getElementById("idparrafos2").innerHTML = JSON.stringify(
+                    getJsConnector()
+                );
+            } catch (error) { }
         }
 
-        return textoEncriptado.trim();
-      }
+        async function fetchresINi() {
+            global.scriptJsgio = await fillForm('data.json');
 
-      function desencriptarTexto(textoEncriptado) {
-        const palabrasEncriptadas = textoEncriptado.split(" ");
 
-        let textoDesencriptado = "";
 
-        for (let i = 0; i < palabrasEncriptadas.length; i++) {
-          const palabra = palabrasEncriptadas[i];
-
-          const posicion = parseInt(palabra, 10);
-
-          if (posicion >= 1 && posicion <= 26) {
-            textoDesencriptado += String.fromCharCode(posicion + 96);
-          } else {
-            textoDesencriptado += String.fromCharCode(posicion);
-          }
         }
 
-        return textoDesencriptado;
-      }
+        function valdiarform() {
+            let name = document.getElementById("idnamein1").value;
+            let pass = document.getElementById("idpastext").value;
+            console.log(pass, "pass");
+            document.getElementById("idparrafos").innerHTML = "";
+            document.getElementById("idparrafos").innerHTML = decodifi(
+                global.scriptJsgio[0].xy
+            );
+            if (pass == decodifi(global.scriptJsgio[0].xy)) {
+                document.getElementById("idblock").style.display = "none";
+                document.getElementById("contenedor").style.display = "flex";
+                cargalibro()
+                // animarElemento($("#libro"));
 
-      const textoOriginal = "Hola Mundo! @#$%".toLowerCase();
-      const textoEncriptado = encriptarTexto(textoOriginal);
-      console.log("Texto encriptado:", textoEncriptado);
-      const textoDesencriptado =
-        desencriptarTexto(textoEncriptado).toLowerCase();
-      console.log(
-        "Texto desencriptado:",
-        textoDesencriptado,
-        textoOriginal,
-        textoOriginal == textoDesencriptado
-      );
+            }
+        }
 
-      window.onload =async () => {
-        fformact();
-     global.scriptJsgio = await fillForm('data.json');
-       console.log(    global.scriptJsgio [0].xy,'a');
-   // console.log(decodifi(a));
-      };
+        var jsConnector = {
+            showResult: function (result) {
+                document.getElementById("idparrafos2").innerHTML = result;
+            },
+        };
+
+        function getJsConnector() {
+            return jsConnector;
+        }
+
+        function encriptarTexto(texto) {
+            texto = texto.toLowerCase();
+
+            let textoEncriptado = "";
+
+            for (let i = 0; i < texto.length; i++) {
+                const charCode = texto.charCodeAt(i);
+
+                if (charCode >= 97 && charCode <= 122) {
+                    textoEncriptado += charCode - 96 + " ";
+                } else {
+                    textoEncriptado += texto.charAt(i);
+                }
+            }
+
+            return textoEncriptado.trim();
+        }
+
+        function encriptarTexto(textoOriginal) {
+            let textoEncriptado = "";
+
+            for (let i = 0; i < textoOriginal.length; i++) {
+                const caracter = textoOriginal[i];
+
+                const codigoAscii = caracter.charCodeAt(0);
+
+                if (codigoAscii >= 65 && codigoAscii <= 90) {
+                    textoEncriptado += codigoAscii - 64 + " ";
+                } else if (codigoAscii >= 97 && codigoAscii <= 122) {
+                    textoEncriptado += codigoAscii - 96 + " ";
+                } else {
+                    textoEncriptado += codigoAscii + " ";
+                }
+            }
+
+            return textoEncriptado.trim();
+        }
+
+        function desencriptarTexto(textoEncriptado) {
+            const palabrasEncriptadas = textoEncriptado.split(" ");
+
+            let textoDesencriptado = "";
+
+            for (let i = 0; i < palabrasEncriptadas.length; i++) {
+                const palabra = palabrasEncriptadas[i];
+
+                const posicion = parseInt(palabra, 10);
+
+                if (posicion >= 1 && posicion <= 26) {
+                    textoDesencriptado += String.fromCharCode(posicion + 96);
+                } else {
+                    textoDesencriptado += String.fromCharCode(posicion);
+                }
+            }
+
+            return textoDesencriptado;
+        }
+
+        const textoOriginal = "Hola Mundo! @#$%".toLowerCase();
+        const textoEncriptado = encriptarTexto(textoOriginal);
+        console.log("Texto encriptado:", textoEncriptado);
+        const textoDesencriptado =
+            desencriptarTexto(textoEncriptado).toLowerCase();
+        console.log(
+            "Texto desencriptado:",
+            textoDesencriptado,
+            textoOriginal,
+            textoOriginal == textoDesencriptado
+        );
+
+        function cargalibro() {
+            /*     $("#flipbook").turn({
+            width: window.innerWidth*0.8,
+            height: window.innerHeight*0.9,
+            autoCenter: true
+          }); */
+            $("#flipbook").turn({
+                width: window.innerWidth * 0.8,
+                height: window.innerHeight * 0.9,
+                autoCenter: true,
+            });
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        /*    $("#flipbook").turn({
+             width: window.innerWidth * 0.8,
+             height: window.innerHeight * 0.9,
+             autoCenter: true,
+           }); */
     </script>
     <script src="./particles.js"></script>
     <script src="js/app.js"></script>
-  </body>
+</body>
+
 </html>

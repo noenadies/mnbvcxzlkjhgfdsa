@@ -86,6 +86,9 @@ canvas{
 /* ---- particles.js container ---- */
 
 #particles-js{
+  position: absolute;
+  top: 0%;
+  left: 0%;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -93,6 +96,7 @@ canvas{
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .checkbox input {
@@ -260,3 +264,216 @@ canvas{
 .Actualizar:hover{
   color: #1277f3;
 }
+
+.centrarColumna{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+.hard {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  line-height: 300px;
+}
+.cl1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    
+}
+
+
+
+
+
+
+#libro {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.pagina {
+  border: 4px solid rgb(139, 139, 139);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  position: relative;
+  width: 90%;
+  height: 100%;
+}
+/*      input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  margin: 20px auto;
+  display: block;
+} */
+/*       button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+} */
+.clp1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+#contenedor{
+
+  width: 80%;
+  height: 100%;
+  background-color: rgb(201, 201, 201);
+  position: absolute;
+  bottom: 0%;
+  left: 15%;
+  z-index: 2;
+ 
+
+
+}
+.centrarcontenido{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.clconten {
+  width: 80%;
+  height: 100%;
+  background-color: rgb(201, 201, 201);
+  position: absolute;
+  bottom: 0%;
+  left: 15%;
+  z-index: 2;
+
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#idblock {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 50vw;
+  height: 100%;
+  background-color: rgba(1, 141, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3); /* Color de fondo translúcido */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Aplicar efecto de desenfoque */
+  -webkit-backdrop-filter: blur(
+    10px
+  ); /* Para navegadores webkit (Safari, Chrome) */
+  background: linear-gradient(
+    to bottom,
+    rgba(201, 231, 255, 0.5),
+    rgba(1, 141, 255, 0.5)
+  );
+  z-index: 100;
+}
+.contenedrpaginas {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(226, 124, 0);
+}
+.classnone {
+  display: none;
+}
+
+.placa-metalica {
+  width: 120px;
+  height: 50px;
+  background: linear-gradient(to bottom right, #eaeaea, #bdbdbd);
+  border: 1px solid #888;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+ 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+ .claltoauto{
+  height: auto;
+  width: 100%;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+ }
+ .clboxt{
+  color: #3490ff;
+  text-align: justify;
+  line-height:16px ;
+ }
+
+ .clboxp{
+  color: #ffffff;
+  text-align: justify;
+  line-height:16px ;
+  background-color: #646464;
+  font-size: 16px;
+  text-align: justify;
+  height: auto;
+ }
