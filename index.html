@@ -29,7 +29,8 @@
     <div class="clp1">
         <div id="particles-js"></div>
         <div id="idmenulateralbase" class="classnone">
-          <div class="cluifalse"><div class="cicleicon">&nabla;</div></div>
+          <div class="cluifalse"><div    class="cicleicon" id="idpanel0"  onclick="fonclcikfun(this)">&nabla;</div></div>
+          <div  class="cluifalse"><div   class="cicleicon" id="idpanel1"  onclick="fonclcikfun(this)">&#8862;</div></div>
           
 
         </div>
@@ -298,11 +299,18 @@
     </script>
 
     <script type="text/javascript">
-        /*    $("#flipbook").turn({
-             width: window.innerWidth * 0.8,
-             height: window.innerHeight * 0.9,
-             autoCenter: true,
-           }); */
+       
+
+       function fonclcikfun(thiss){
+        if(thiss.id=='idpanel0'){mostrarElementos(document.getElementById('flipbook')) }
+        if(thiss.id=='idpanel1'){ ocultarElementos(document.getElementById('flipbook'))}
+        if(thiss.id=='idpanel2'){ }
+        if(thiss.id=='idpanel3'){ }
+        if(thiss.id=='idpanel4'){ }
+        if(thiss.id=='idpanel5'){ }
+        if(thiss.id=='idpanel6'){ }
+
+       }
     </script>
     <script src="./particles.js"></script>
     <script src="js/app.js"></script>
