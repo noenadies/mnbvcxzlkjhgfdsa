@@ -29,8 +29,8 @@
     <div class="clp1">
         <div id="particles-js"></div>
         <div id="idmenulateralbase" class="classnone">
-          <div class="cluifalse"><div    class="cicleicon" id="idpanel0"  onclick="fonclcikfun(this)">&nabla;</div></div>
-          <div  class="cluifalse"><div   class="cicleicon" id="idpanel1"  onclick="fonclcikfun(this)">&#8862;</div></div>
+          <div class="cluifalse"><div    class="cicleicon" id="idpanel0" tabindex="0" onclick="fonclcikfun(this)">&nabla;</div></div>
+          <div  class="cluifalse"><div   class="cicleicon" id="idpanel1" tabindex="0"  onclick="fonclcikfun(this)">&#8862;</div></div>
           
 
         </div>
@@ -158,6 +158,12 @@
 
         }
         function mostrarElementos(elem) {
+            if (elem.classList.contains("classnone")) {
+                elem.classList.remove("classnone");
+            }
+
+        }
+        function mostrarElementos4(elem) {
             if (elem.classList.contains("classnone")) {
                 elem.classList.remove("classnone");
             }
