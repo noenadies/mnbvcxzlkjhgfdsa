@@ -459,21 +459,48 @@ canvas{
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: baseline;
 	align-content: center;
  }
  .clboxt{
-  color: #3490ff;
-  text-align: justify;
-  line-height:16px ;
+  color: #3490ff;  
+  min-height: 40px;
+  padding-top: 22px;
+  padding-left:70px ;
+  font-size: 44px;
  }
 
- .clboxp{
-  color: #ffffff;
+ .clboxp{ 
+  color: #000000;
   text-align: justify;
   line-height:16px ;
-  background-color: #646464;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(197, 197, 197) 100%);
   font-size: 16px;
   text-align: justify;
   height: auto;
+  width: 80%;
+ padding-left: 70px;
+ }
+
+ #idmenulateralbase{
+  position: absolute;
+  top: 30%;
+  left: 40px;
+  width: 70px;
+   background-color:#afafaf ;
+height: 400px;
+ 
+  z-index: 1000;
+ }
+ 
+ #idmenulateralbase:hover{
+  position: absolute;
+  top: 30%;
+  left: 40px;
+  width: 70px;
+   background-color:#5aafff ;
+height: 400px;
+ 
+  z-index: 1000;
  }
