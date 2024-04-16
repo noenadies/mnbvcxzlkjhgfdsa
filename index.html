@@ -162,6 +162,7 @@
             //ocultarElementos(document.getElementById("idpanellogin"));
           }
         });
+        lectorpdfsmple();
       });
       function fActualizar() {
         /*  var timeStamp = new Date().getTime();
@@ -314,6 +315,70 @@
           autoCenter: true,
         });
       }
+
+
+      function lectorpdfsmple (){
+        
+      var pdfDoc = null;
+      var pageNum = 1;
+      var pageRendering = false;
+      var canvas = document.getElementById('pdfCanvas');
+      var ctx = canvas.getContext('2d');
+      
+      $('#fileInput').on('change', function(e) {
+        var file = e.target.files[0];
+        var fileReader = new FileReader();
+        
+        fileReader.onload = function() {
+          var typedarray = new Uint8Array(this.result);
+          displayPdf(typedarray);
+        };
+        
+        fileReader.readAsArrayBuffer(file);
+      });
+      
+      $('#prevPageBtn').on('click', function() {
+        if (pageNum <= 1) {
+          return;
+        }
+        pageNum--;
+        renderPage();
+      });
+      
+      $('#nextPageBtn').on('click', function() {
+        if (pageNum >= pdfDoc.numPages) {
+          return;
+        }
+        pageNum++;
+        renderPage();
+      });
+      
+      function displayPdf(typedarray) {
+        pdfjsLib.getDocument(typedarray).promise.then(function(pdf) {
+          pdfDoc = pdf;
+          renderPage();
+        });
+      }
+      
+      function renderPage() {
+        pageRendering = true;
+        pdfDoc.getPage(pageNum).then(function(page) {
+          var viewport = page.getViewport({ scale: 1.5 });
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          
+          var renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+          
+          page.render(renderContext).promise.then(function() {
+            pageRendering = false;
+          });
+        });
+      }
+    }
+       
     </script>
 
     <script type="text/javascript">
@@ -354,3 +419,4 @@
     <script src="js/app.js"></script>
   </body>
 </html>
+<!-- https://dzone.com/articles/top-20-git-commands-with-examples -->
