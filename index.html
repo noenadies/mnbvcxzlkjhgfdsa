@@ -81,7 +81,7 @@
       </div>
 
       <div id="contenedor" class="contenedor1 classnone centrarcontenido">
-        <div id="flipbook">
+        <div id="flipbook" class="clpanelesopen">
           <div class="hard">Turn.js</div>
           <div class="hard"></div>
           <div class="cl1 centrarColumna">
@@ -105,18 +105,15 @@
           <!-- fin de hoja -->
 
           <div class="cl1">
-            <iframe
-              title="Voxel School Reel"
-              loading="lazy"
-              src="https://player.vimeo.com/video/883339822?h=fb9880d3eb&amp;background=1&amp;autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1"
-              allowfullscreen="allowfullscreen"
-            ></iframe>
+            
           </div>
           <div class="cl1">Page 3</div>
           <div class="cl1">Page 4</div>
           <div class="hard"></div>
           <div class="hard"></div>
         </div>
+        <iframe class="clpanelesopen classnone" id="idpanel1p" src="L1.pdf" width="90%" height="90%" frameborder="0"></iframe>
+
       </div>
     </div>
 
@@ -311,17 +308,20 @@
     <script type="text/javascript">
       function fonclcikfun(thiss) {
         var elementos = document.querySelectorAll(".cicleicon");
-
-        // Iterar sobre cada elemento y eliminar la clase deseada
         elementos.forEach(function (elemento) {
           elemento.classList.remove("cicleiconColor");
         });
+        var elementosPaneles = document.querySelectorAll(".clpanelesopen");
+        elementosPaneles.forEach(function (elementop) {
+          ocultarElementos(elementop);
+        });
+ 
         document.getElementById(thiss.id).classList.add("cicleiconColor");
         if (thiss.id == "idpanel0") {
           mostrarElementos(document.getElementById("flipbook"));
         }
         if (thiss.id == "idpanel1") {
-          ocultarElementos(document.getElementById("flipbook"));
+          mostrarElementos(document.getElementById("idpanel1p"));
         
         }
         if (thiss.id == "idpanel2") {
