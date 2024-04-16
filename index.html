@@ -123,8 +123,14 @@
           <div class="hard"></div>
           <div class="hard"></div>
         </div>
-        <iframe class="clpanelesopen classnone" id="idpanel1p" src="L1.pdf" width="90%" height="90%" frameborder="0"></iframe>
-
+     <!--    <iframe class="clpanelesopen classnone" id="idpanel1p" src="L1.pdf" width="90%" height="90%" frameborder="0"></iframe> -->
+<div class="clpanelesopen classnone" id="idpanel1p">
+  <input type="text" id="urlInput" placeholder="Ingrese la URL del PDF">
+  <button id="loadBtn">Cargar PDF</button>
+  <button id="prevPageBtn">Anterior</button>
+  <button id="nextPageBtn">Siguiente</button>
+  <canvas id="pdfCanvas"></canvas>
+</div>
       </div>
     </div>
 
@@ -317,24 +323,20 @@
       }
 
 
-      function lectorpdfsmple (){
-        
+      function lectorpdfsmple (){ 
       var pdfDoc = null;
       var pageNum = 1;
       var pageRendering = false;
       var canvas = document.getElementById('pdfCanvas');
       var ctx = canvas.getContext('2d');
       
-      $('#fileInput').on('change', function(e) {
-        var file = e.target.files[0];
-        var fileReader = new FileReader();
-        
-        fileReader.onload = function() {
-          var typedarray = new Uint8Array(this.result);
-          displayPdf(typedarray);
-        };
-        
-        fileReader.readAsArrayBuffer(file);
+      $('#loadBtn').on('click', function() {
+        var url = $('#urlInput').val();
+        if (!url) {
+          alert('Ingrese una URL válida');
+          return;
+        }
+        loadPdfFromUrl(url);
       });
       
       $('#prevPageBtn').on('click', function() {
@@ -352,6 +354,19 @@
         pageNum++;
         renderPage();
       });
+      
+      function loadPdfFromUrl(url) {
+        fetch(url)
+          .then(response => response.arrayBuffer())
+          .then(arrayBuffer => {
+            var typedarray = new Uint8Array(arrayBuffer);
+            displayPdf(typedarray);
+          })
+          .catch(error => {
+            console.error('Error al cargar el PDF:', error);
+            alert('Error al cargar el PDF. Por favor, verifique la URL.');
+          });
+      }
       
       function displayPdf(typedarray) {
         pdfjsLib.getDocument(typedarray).promise.then(function(pdf) {
@@ -377,6 +392,7 @@
           });
         });
       }
+    
     }
        
     </script>
