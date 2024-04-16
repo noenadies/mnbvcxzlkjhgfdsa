@@ -600,7 +600,7 @@ height: 400px;
 }
 
 #pdfCanvas{
-  position: relative;
-  top: 120px;
+  position: absolute;
+  top: 200px;
 
 }
