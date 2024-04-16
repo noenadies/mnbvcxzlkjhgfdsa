@@ -535,5 +535,8 @@ height: 400px;
  }
  
 .cicleicon:focus {
+ /* Cambia el color de fondo cuando se pasa el cursor o se enfoca */
+}
+.cicleiconColor {
   background-color: #95cfff; /* Cambia el color de fondo cuando se pasa el cursor o se enfoca */
 }

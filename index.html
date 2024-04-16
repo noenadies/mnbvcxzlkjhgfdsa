@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Libro con Turn.js</title>
@@ -11,315 +10,333 @@
     <script src="un.js"></script>
 
     <style>
-     
-
-        #flipbook {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-     
-
-     
+      #flipbook {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="clp1">
-        <div id="particles-js"></div>
-        <div id="idmenulateralbase" class="classnone">
-          <div class="cluifalse"><div    class="cicleicon" id="idpanel0" tabindex="0" onclick="fonclcikfun(this)">&nabla;</div></div>
-          <div  class="cluifalse"><div   class="cicleicon" id="idpanel1" tabindex="0"  onclick="fonclcikfun(this)">&#8862;</div></div>
-          
-
+      <div id="particles-js"></div>
+      <div id="idmenulateralbase" class="classnone">
+        <div class="cluifalse">
+          <div
+            class="cicleicon"
+            id="idpanel0"
+            tabindex="0"
+            onclick="fonclcikfun(this)"
+          >
+            &nabla;
+          </div>
         </div>
-
-        <div id="idblock" class="">
-            <p id="idparrafos"></p>
-            <br />
-            <p id="idparrafos2">parrafo 2</p>
-            <div id="idpanellogin">
-                <form id="loginForm">
-                    <div class="gridcsgl">
-                        <div class="n1 anchalto centerg1">
-                            <label for="">name</label>
-                        </div>
-
-                        <div class="i1 anchalto centerg1">
-                            <input id="idnamein1" type="text" class="css-input" />
-                        </div>
-                        <div class="n2 anchalto centerg1">
-                            <label for="">name</label>
-                        </div>
-
-                        <div class="i2 anchalto centerg1">
-                            <input id="idpastext" type="text" class="css-input" />
-                        </div>
-
-                        <div class="clfalsebt" onclick="valdiarform()">buton</div>
-
-                        <div class="Actualizar" onclick="fActualizar()">Actualizar</div>
-                    </div>
-                </form>
-            </div>
-            <div class="checkbox-wrap1">
-                <label class="checkbox">
-                    <input id="miCheckbox" type="checkbox" />
-                    <span></span>
-                </label>
-            </div>
+        <div class="cluifalse">
+          <div
+            class="cicleicon"
+            id="idpanel1"
+            tabindex="0"
+            onclick="fonclcikfun(this)"
+          >
+            &#8862;
+          </div>
         </div>
+      </div>
 
-        <div id="contenedor" class="contenedor1 classnone centrarcontenido">
-            <div id="flipbook">
-                <div class="hard">Turn.js</div>
-                <div class="hard"></div>
-                <div class="cl1 centrarColumna">
+      <div id="idblock" class="">
+        <p id="idparrafos"></p>
+        <br />
+        <p id="idparrafos2">parrafo 2</p>
+        <div id="idpanellogin">
+          <form id="loginForm">
+            <div class="gridcsgl">
+              <div class="n1 anchalto centerg1">
+                <label for="">name</label>
+              </div>
 
-                    <div class="claltoauto">
-                        <div class="clboxt">git config</div>
-                        <div class="clboxp">
-                            <p class="clp">      Usage: git config –global user.name “[name]”</p>
-                            <p class="clp">      Usage: git config –global user.email “[email address]”</p>                 
+              <div class="i1 anchalto centerg1">
+                <input id="idnamein1" type="text" class="css-input" />
+              </div>
+              <div class="n2 anchalto centerg1">
+                <label for="">name</label>
+              </div>
 
-                            <p class="clp"> Este comando establece el nombre del autor y la dirección de correo electrónico, respectivamente, que se utilizarán con su
-                              se compromete.</p>
-                        </div>
+              <div class="i2 anchalto centerg1">
+                <input id="idpastext" type="text" class="css-input" />
+              </div>
 
-                    </div>
+              <div class="clfalsebt" onclick="valdiarform()">buton</div>
 
-                </div>
-
-                <!-- fin de hoja -->
-
-
-                <div class="cl1"><iframe title="Voxel School Reel" loading="lazy" src="https://player.vimeo.com/video/883339822?h=fb9880d3eb&amp;background=1&amp;autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1" allowfullscreen="allowfullscreen"></iframe></div>
-                <div class="cl1">Page 3</div>
-                <div class="cl1">Page 4</div>
-                <div class="hard"></div>
-                <div class="hard"></div>
+              <div class="Actualizar" onclick="fActualizar()">Actualizar</div>
             </div>
+          </form>
         </div>
+        <div class="checkbox-wrap1">
+          <label class="checkbox">
+            <input id="miCheckbox" type="checkbox" />
+            <span></span>
+          </label>
+        </div>
+      </div>
+
+      <div id="contenedor" class="contenedor1 classnone centrarcontenido">
+        <div id="flipbook">
+          <div class="hard">Turn.js</div>
+          <div class="hard"></div>
+          <div class="cl1 centrarColumna">
+            <div class="claltoauto">
+              <div class="clboxt">git config</div>
+              <div class="clboxp">
+                <p class="clp">Usage: git config –global user.name “[name]”</p>
+                <p class="clp">
+                  Usage: git config –global user.email “[email address]”
+                </p>
+
+                <p class="clp">
+                  Este comando establece el nombre del autor y la dirección de
+                  correo electrónico, respectivamente, que se utilizarán con su
+                  se compromete.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- fin de hoja -->
+
+          <div class="cl1">
+            <iframe
+              title="Voxel School Reel"
+              loading="lazy"
+              src="https://player.vimeo.com/video/883339822?h=fb9880d3eb&amp;background=1&amp;autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1"
+              allowfullscreen="allowfullscreen"
+            ></iframe>
+          </div>
+          <div class="cl1">Page 3</div>
+          <div class="cl1">Page 4</div>
+          <div class="hard"></div>
+          <div class="hard"></div>
+        </div>
+      </div>
     </div>
 
     <script>
-        var global = {
-            java: null,
-            scriptJsgio: null,
-        };
-        function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
-            const contenedorAltura = $("#contenedor").height();
-            elemento.css({
-                bottom: ini,
-                opacity: 0, // Establecer la opacidad inicial en 0
-            });
-            elemento.animate(
-                {
-                    bottom: fin,
-                    opacity: 1, // Animar la opacidad hasta 1
-                },
-                2000
-            );
-        }
-
-        $(document).ready(function () {
-            fetchresINi();
-            var miCheckbox = document.getElementById("miCheckbox");
-
-            miCheckbox.addEventListener("change", function () {
-                if (this.checked) {
-                    console.log("La casilla de verificación está marcada");
-                    document.getElementById("idpanellogin").style.display = "flex";
-
-                } else {
-                    console.log("La casilla de verificación está desmarcada");
-                    document.getElementById("idpanellogin").style.display = "none";
-                    //ocultarElementos(document.getElementById("idpanellogin"));
-
-                }
-            });
-
-
+      var global = {
+        java: null,
+        scriptJsgio: null,
+      };
+      function animarElemento(elemento, fin = 0, ini = -window.innerHeight) {
+        const contenedorAltura = $("#contenedor").height();
+        elemento.css({
+          bottom: ini,
+          opacity: 0, // Establecer la opacidad inicial en 0
         });
-        function fActualizar() {
-            /*  var timeStamp = new Date().getTime();
+        elemento.animate(
+          {
+            bottom: fin,
+            opacity: 1, // Animar la opacidad hasta 1
+          },
+          2000
+        );
+      }
+
+      $(document).ready(function () {
+        fetchresINi();
+        var miCheckbox = document.getElementById("miCheckbox");
+
+        miCheckbox.addEventListener("change", function () {
+          if (this.checked) {
+            console.log("La casilla de verificación está marcada");
+            document.getElementById("idpanellogin").style.display = "flex";
+          } else {
+            console.log("La casilla de verificación está desmarcada");
+            document.getElementById("idpanellogin").style.display = "none";
+            //ocultarElementos(document.getElementById("idpanellogin"));
+          }
+        });
+      });
+      function fActualizar() {
+        /*  var timeStamp = new Date().getTime();
       
               var nuevaURL = window.location.href + "?timestamp=" + timeStamp;
       
               window.location.href = nuevaURL; */
-            location.reload(true);
-        }
+        location.reload(true);
+      }
 
-        function ocultarElementos(elem) {
-            if (!elem.classList.contains("classnone")) {
-                elem.classList.add("classnone");
-            }
-
+      function ocultarElementos(elem) {
+        if (!elem.classList.contains("classnone")) {
+          elem.classList.add("classnone");
         }
-        function mostrarElementos(elem) {
-            if (elem.classList.contains("classnone")) {
-                elem.classList.remove("classnone");
-            }
-
+      }
+      function mostrarElementos(elem) {
+        if (elem.classList.contains("classnone")) {
+          elem.classList.remove("classnone");
         }
-        function mostrarElementos4(elem) {
-            if (elem.classList.contains("classnone")) {
-                elem.classList.remove("classnone");
-            }
-
+      }
+      function mostrarElementos4(elem) {
+        if (elem.classList.contains("classnone")) {
+          elem.classList.remove("classnone");
         }
-        function fformact() {
-            try {
-                document.getElementById("idparrafos").innerHTML = JSON.stringify(
-                    "miObjetoJava.obtenerObjeto()"
-                );
-                let res = javaConnector.toLowerCase(
-                    document.getElementById("idnamein1").value.toString()
-                );
-                global.java = res;
-                document.getElementById("idparrafos").innerHTML =
-                    res; /*  JSON.stringify(
+      }
+      function fformact() {
+        try {
+          document.getElementById("idparrafos").innerHTML = JSON.stringify(
+            "miObjetoJava.obtenerObjeto()"
+          );
+          let res = javaConnector.toLowerCase(
+            document.getElementById("idnamein1").value.toString()
+          );
+          global.java = res;
+          document.getElementById("idparrafos").innerHTML =
+            res; /*  JSON.stringify(
             JSON.parse(res)
           ); */
-                document.getElementById("idparrafos2").innerHTML = JSON.stringify(
-                    getJsConnector()
-                );
-            } catch (error) { }
-        }
+          document.getElementById("idparrafos2").innerHTML = JSON.stringify(
+            getJsConnector()
+          );
+        } catch (error) {}
+      }
 
-        async function fetchresINi() {
-            global.scriptJsgio = await fillForm('data.json');
+      async function fetchresINi() {
+        global.scriptJsgio = await fillForm("data.json");
+      }
 
-
-
-        }
-
-        function valdiarform() {
-            let name = document.getElementById("idnamein1").value;
-            let pass = document.getElementById("idpastext").value;
-            console.log(pass, "pass");
-            document.getElementById("idparrafos").innerHTML = "";
-            document.getElementById("idparrafos").innerHTML = decodifi(
-                global.scriptJsgio[0].xy
-            );
-            if (pass == decodifi(global.scriptJsgio[0].xy)) {
-                document.getElementById("idblock").style.display = "none";
-                document.getElementById("contenedor").style.display = "flex";
-                mostrarElementos(document.getElementById('idmenulateralbase'));
-                cargalibro()
-                // animarElemento($("#libro"));
-
-            }
-        }
-
-        var jsConnector = {
-            showResult: function (result) {
-                document.getElementById("idparrafos2").innerHTML = result;
-            },
-        };
-
-        function getJsConnector() {
-            return jsConnector;
-        }
-
-        function encriptarTexto(texto) {
-            texto = texto.toLowerCase();
-
-            let textoEncriptado = "";
-
-            for (let i = 0; i < texto.length; i++) {
-                const charCode = texto.charCodeAt(i);
-
-                if (charCode >= 97 && charCode <= 122) {
-                    textoEncriptado += charCode - 96 + " ";
-                } else {
-                    textoEncriptado += texto.charAt(i);
-                }
-            }
-
-            return textoEncriptado.trim();
-        }
-
-        function encriptarTexto(textoOriginal) {
-            let textoEncriptado = "";
-
-            for (let i = 0; i < textoOriginal.length; i++) {
-                const caracter = textoOriginal[i];
-
-                const codigoAscii = caracter.charCodeAt(0);
-
-                if (codigoAscii >= 65 && codigoAscii <= 90) {
-                    textoEncriptado += codigoAscii - 64 + " ";
-                } else if (codigoAscii >= 97 && codigoAscii <= 122) {
-                    textoEncriptado += codigoAscii - 96 + " ";
-                } else {
-                    textoEncriptado += codigoAscii + " ";
-                }
-            }
-
-            return textoEncriptado.trim();
-        }
-
-        function desencriptarTexto(textoEncriptado) {
-            const palabrasEncriptadas = textoEncriptado.split(" ");
-
-            let textoDesencriptado = "";
-
-            for (let i = 0; i < palabrasEncriptadas.length; i++) {
-                const palabra = palabrasEncriptadas[i];
-
-                const posicion = parseInt(palabra, 10);
-
-                if (posicion >= 1 && posicion <= 26) {
-                    textoDesencriptado += String.fromCharCode(posicion + 96);
-                } else {
-                    textoDesencriptado += String.fromCharCode(posicion);
-                }
-            }
-
-            return textoDesencriptado;
-        }
-
-        const textoOriginal = "Hola Mundo! @#$%".toLowerCase();
-        const textoEncriptado = encriptarTexto(textoOriginal);
-        console.log("Texto encriptado:", textoEncriptado);
-        const textoDesencriptado =
-            desencriptarTexto(textoEncriptado).toLowerCase();
-        console.log(
-            "Texto desencriptado:",
-            textoDesencriptado,
-            textoOriginal,
-            textoOriginal == textoDesencriptado
+      function valdiarform() {
+        let name = document.getElementById("idnamein1").value;
+        let pass = document.getElementById("idpastext").value;
+        console.log(pass, "pass");
+        document.getElementById("idparrafos").innerHTML = "";
+        document.getElementById("idparrafos").innerHTML = decodifi(
+          global.scriptJsgio[0].xy
         );
-
-        function cargalibro() {
-          
-            $("#flipbook").turn({
-                width: window.innerWidth * 0.8,
-                height: window.innerHeight * 0.9,
-                autoCenter: true,
-            });
-
+        if (pass == decodifi(global.scriptJsgio[0].xy)) {
+          document.getElementById("idblock").style.display = "none";
+          document.getElementById("contenedor").style.display = "flex";
+          mostrarElementos(document.getElementById("idmenulateralbase"));
+          cargalibro();
+          // animarElemento($("#libro"));
         }
+      }
+
+      var jsConnector = {
+        showResult: function (result) {
+          document.getElementById("idparrafos2").innerHTML = result;
+        },
+      };
+
+      function getJsConnector() {
+        return jsConnector;
+      }
+
+      function encriptarTexto(texto) {
+        texto = texto.toLowerCase();
+
+        let textoEncriptado = "";
+
+        for (let i = 0; i < texto.length; i++) {
+          const charCode = texto.charCodeAt(i);
+
+          if (charCode >= 97 && charCode <= 122) {
+            textoEncriptado += charCode - 96 + " ";
+          } else {
+            textoEncriptado += texto.charAt(i);
+          }
+        }
+
+        return textoEncriptado.trim();
+      }
+
+      function encriptarTexto(textoOriginal) {
+        let textoEncriptado = "";
+
+        for (let i = 0; i < textoOriginal.length; i++) {
+          const caracter = textoOriginal[i];
+
+          const codigoAscii = caracter.charCodeAt(0);
+
+          if (codigoAscii >= 65 && codigoAscii <= 90) {
+            textoEncriptado += codigoAscii - 64 + " ";
+          } else if (codigoAscii >= 97 && codigoAscii <= 122) {
+            textoEncriptado += codigoAscii - 96 + " ";
+          } else {
+            textoEncriptado += codigoAscii + " ";
+          }
+        }
+
+        return textoEncriptado.trim();
+      }
+
+      function desencriptarTexto(textoEncriptado) {
+        const palabrasEncriptadas = textoEncriptado.split(" ");
+
+        let textoDesencriptado = "";
+
+        for (let i = 0; i < palabrasEncriptadas.length; i++) {
+          const palabra = palabrasEncriptadas[i];
+
+          const posicion = parseInt(palabra, 10);
+
+          if (posicion >= 1 && posicion <= 26) {
+            textoDesencriptado += String.fromCharCode(posicion + 96);
+          } else {
+            textoDesencriptado += String.fromCharCode(posicion);
+          }
+        }
+
+        return textoDesencriptado;
+      }
+
+      const textoOriginal = "Hola Mundo! @#$%".toLowerCase();
+      const textoEncriptado = encriptarTexto(textoOriginal);
+      console.log("Texto encriptado:", textoEncriptado);
+      const textoDesencriptado =
+        desencriptarTexto(textoEncriptado).toLowerCase();
+      console.log(
+        "Texto desencriptado:",
+        textoDesencriptado,
+        textoOriginal,
+        textoOriginal == textoDesencriptado
+      );
+
+      function cargalibro() {
+        $("#flipbook").turn({
+          width: window.innerWidth * 0.8,
+          height: window.innerHeight * 0.9,
+          autoCenter: true,
+        });
+      }
     </script>
 
     <script type="text/javascript">
-       
+      function fonclcikfun(thiss) {
+        var elementos = document.querySelectorAll(".cicleicon");
 
-       function fonclcikfun(thiss){
-        if(thiss.id=='idpanel0'){mostrarElementos(document.getElementById('flipbook')) }
-        if(thiss.id=='idpanel1'){ ocultarElementos(document.getElementById('flipbook'))}
-        if(thiss.id=='idpanel2'){ }
-        if(thiss.id=='idpanel3'){ }
-        if(thiss.id=='idpanel4'){ }
-        if(thiss.id=='idpanel5'){ }
-        if(thiss.id=='idpanel6'){ }
-
-       }
+        // Iterar sobre cada elemento y eliminar la clase deseada
+        elementos.forEach(function (elemento) {
+          elemento.classList.remove("cicleiconColor");
+        });
+        document.getElementById(thiss.id).classList.add("cicleiconColor");
+        if (thiss.id == "idpanel0") {
+          mostrarElementos(document.getElementById("flipbook"));
+        }
+        if (thiss.id == "idpanel1") {
+          ocultarElementos(document.getElementById("flipbook"));
+        
+        }
+        if (thiss.id == "idpanel2") {
+        }
+        if (thiss.id == "idpanel3") {
+        }
+        if (thiss.id == "idpanel4") {
+        }
+        if (thiss.id == "idpanel5") {
+        }
+        if (thiss.id == "idpanel6") {
+        }
+      }
     </script>
     <script src="./particles.js"></script>
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>
