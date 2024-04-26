@@ -614,3 +614,79 @@ height: 400px;
   top: 400px;
 
 }
+
+
+
+.clContainerP{
+  /*     display:  grid;
+      grid-template-columns: 1;
+      grid-template-rows: auto; */display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: baseline;
+align-content: stretch;
+  
+position: relative;
+left: 90px;
+width: 40%;
+background-color: #ffffff;
+
+  }
+.clContainerP > p:hover{
+  color: #0088ff;
+  background-color: rgba(94, 94, 94, 0.192);
+
+
+}
+.clContainerP > p{
+  display: inline-block;
+  width: auto;
+}
+
+
+
+
+
+
+
+.containerLaser {
+position: absolute;
+top: 0%;
+right: 1px;
+width: 30px;
+height: 100% ; /* Altura de ejemplo para el contenedor */
+background-color: rgba(0, 0, 0, 0.192);
+overflow: hidden; /* Para ocultar el desbordamiento del láser */
+z-index: 1;
+}
+
+.laser {
+position: absolute;
+top: 0;
+left: 50%; /* Posición inicial del láser */
+transform: translateX(-50%);
+width: 4px; /* Ancho del láser */
+height: 100px; /* Altura del láser */
+background-color: cyan;
+box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan, 0 0 120px cyan, 0 0 150px cyan; /* Efecto de neón */
+animation: laserAnimation 6s linear infinite; /* Animación del láser */
+}
+
+@keyframes laserAnimation {
+0% {
+  transform: translateX(-50%) translateY(-20px); 
+}
+25% {
+  transform: translateX(-50%) translateY(350px); 
+}
+50% {
+  transform: translateX(-50%) translateY(700px); 
+}
+75% {
+  transform: translateX(-50%) translateY(350px);
+}
+100% {
+  transform: translateX(-50%) translateY(0px);
+}
+}
