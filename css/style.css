@@ -628,8 +628,9 @@ align-items: baseline;
 align-content: stretch;
   
 position: relative;
+top: 90px;
 left: 90px;
-width: 40%;
+width: 70%;
 background-color: #ffffff;
 
   }
@@ -662,31 +663,49 @@ z-index: 1;
 }
 
 .laser {
-position: absolute;
-top: 0;
-left: 50%; /* Posición inicial del láser */
-transform: translateX(-50%);
-width: 4px; /* Ancho del láser */
-height: 100px; /* Altura del láser */
-background-color: cyan;
-box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan, 0 0 120px cyan, 0 0 150px cyan; /* Efecto de neón */
-animation: laserAnimation 6s linear infinite; /* Animación del láser */
+  position: absolute;
+  top: 0;
+  left: 50%; /* Posición inicial del láser */
+  transform: translateX(-50%);
+  width: 4px; /* Ancho del láser */
+  height: 100px; /* Altura del láser */
+  background-color: cyan;
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan, 0 0 120px cyan, 0 0 150px cyan; /* Efecto de neón */
+  animation: laserAnimation 6s linear infinite; /* Animación del láser */
 }
 
 @keyframes laserAnimation {
-0% {
-  transform: translateX(-50%) translateY(-20px); 
+  0% {
+      transform: translateX(-50%) translateY(-20px); 
+  }
+  25% {
+      transform: translateX(-50%) translateY(350px); 
+  }
+  50% {
+      transform: translateX(-50%) translateY(700px); 
+  }
+  75% {
+      transform: translateX(-50%) translateY(350px);
+  }
+  100% {
+      transform: translateX(-50%) translateY(0px);
+  }
 }
-25% {
-  transform: translateX(-50%) translateY(350px); 
-}
-50% {
-  transform: translateX(-50%) translateY(700px); 
-}
-75% {
-  transform: translateX(-50%) translateY(350px);
-}
-100% {
-  transform: translateX(-50%) translateY(0px);
-}
+
+@-webkit-keyframes laserAnimation {
+  0% {
+      -webkit-transform: translateX(-50%) translateY(-20px); 
+  }
+  25% {
+      -webkit-transform: translateX(-50%) translateY(350px); 
+  }
+  50% {
+      -webkit-transform: translateX(-50%) translateY(700px); 
+  }
+  75% {
+      -webkit-transform: translateX(-50%) translateY(350px);
+  }
+  100% {
+      -webkit-transform: translateX(-50%) translateY(0px);
+  }
 }
