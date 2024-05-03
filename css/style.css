@@ -673,6 +673,21 @@ z-index: 1;
   box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan, 0 0 120px cyan, 0 0 150px cyan; /* Efecto de neón */
   animation: laserAnimation 6s linear infinite; /* Animación del láser */
 }
+.containerLaser:hover .laser{
+  border: 0px none rgb(1, 203, 78);
+  width: 4px; /* Ancho del láser */
+  height: 100px; /* Altura del láser */
+  /* Color */
+  color: rgb(1, 203, 78);
+  text-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0px, rgba(255, 255, 255, 0.15) 0px 1px 0px;
+  
+  /* Background */
+  background: rgba(0, 0, 0, 0) linear-gradient(rgb(72, 254, 142), rgb(72, 254, 142)) repeat scroll 0% 0% / auto padding-box border-box;
+  
+  box-shadow: rgba(43, 251, 123, 0.3) 0px 5px 10px 0px, rgba(43, 251, 123, 0.25) 0px 10px 40px 0px, rgba(43, 251, 123, 0.25) 0px 15px 80px 0px, rgba(0, 0, 0, 0.05) 0px 2px 1px 0px, rgba(0, 0, 0, 0.05) 0px 4px 2px 0px, rgba(0, 0, 0, 0.05) 0px 8px 4px 0px, rgba(0, 0, 0, 0.05) 0px 16px 8px 0px, rgba(0, 0, 0, 0.05) 0px 32px 16px 0px, rgba(0, 0, 0, 0.6) 0px -1px 0px 0px inset, rgba(255, 255, 255, 0.3) 0px 1px 0px 0px inset;
+  
+}
+
 
 @keyframes laserAnimation {
   0% {
